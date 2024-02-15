@@ -3,29 +3,78 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5D4B3CA02B73B24F000B9DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3C9F2B73B24F000B9DAE /* AppDelegate.swift */; };
 		5D4B3CA22B73B24F000B9DAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3CA12B73B24F000B9DAE /* SceneDelegate.swift */; };
-		5D4B3CA42B73B24F000B9DAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3CA32B73B24F000B9DAE /* ViewController.swift */; };
-		5D4B3CA72B73B24F000B9DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B3CA52B73B24F000B9DAE /* Main.storyboard */; };
 		5D4B3CAA2B73B24F000B9DAE /* CrossLand2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3CA82B73B24F000B9DAE /* CrossLand2.xcdatamodeld */; };
 		5D4B3CAC2B73B252000B9DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B3CAB2B73B252000B9DAE /* Assets.xcassets */; };
 		5D4B3CAF2B73B252000B9DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B3CAD2B73B252000B9DAE /* LaunchScreen.storyboard */; };
+		5DA3FFE22B748CBD003B80AE /* VCDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3FFE02B748CBD003B80AE /* VCDebug.swift */; };
+		5DA3FFE32B748CBD003B80AE /* VCDebug.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA3FFE12B748CBD003B80AE /* VCDebug.xib */; };
+		5DA3FFE62B748D13003B80AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA3FFE42B748D13003B80AE /* Main.storyboard */; };
+		5DA3FFE72B748D13003B80AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3FFE52B748D13003B80AE /* ViewController.swift */; };
+		5DA56A852B7B626B00ADFD08 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA56A842B7B626B00ADFD08 /* SnapKit */; };
+		5DA56A8A2B7B62F300ADFD08 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA56A892B7B62F300ADFD08 /* Alamofire */; };
+		5DA56A8D2B7B630800ADFD08 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA56A8C2B7B630800ADFD08 /* SwiftyJSON */; };
+		5DA56A902B7B631E00ADFD08 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA56A8F2B7B631E00ADFD08 /* AlamofireImage */; };
+		5DA56A982B7B693A00ADFD08 /* VCBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56A962B7B693A00ADFD08 /* VCBottomBar.swift */; };
+		5DA56A992B7B693A00ADFD08 /* VCBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA56A972B7B693A00ADFD08 /* VCBottomBar.xib */; };
+		5DA56A9E2B7B82E400ADFD08 /* VCForumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56A9C2B7B82E400ADFD08 /* VCForumView.swift */; };
+		5DA56A9F2B7B82E400ADFD08 /* VCForumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA56A9D2B7B82E400ADFD08 /* VCForumView.xib */; };
+		5DA56AA32B7B841500ADFD08 /* VCCellForumTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56AA12B7B841500ADFD08 /* VCCellForumTitle.swift */; };
+		5DA56AA42B7B841500ADFD08 /* VCCellForumTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA56AA22B7B841500ADFD08 /* VCCellForumTitle.xib */; };
+		5DA56AA62B7B8B8C00ADFD08 /* MNMarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */; };
+		5DA56AAA2B7B9B9200ADFD08 /* JXMarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */; };
+		5DB9B0952B7C409200E02925 /* VCCellForumMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9B0932B7C409200E02925 /* VCCellForumMain.swift */; };
+		5DB9B0962B7C409200E02925 /* VCCellForumMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9B0942B7C409200E02925 /* VCCellForumMain.xib */; };
+		5DB9B0992B7C423900E02925 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB9B0982B7C423900E02925 /* Hero */; };
+		5DE8C7FE2B7C9CB800B868FB /* AnimateText in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE8C7FD2B7C9CB800B868FB /* AnimateText */; };
+		5DE8C8042B7CC77900B868FB /* VCSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8C8022B7CC77900B868FB /* VCSettings.swift */; };
+		5DE8C8052B7CC77900B868FB /* VCSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE8C8032B7CC77900B868FB /* VCSettings.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5DA56A9B2B7B6AF400ADFD08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5D4B3C9C2B73B24F000B9DAE /* CrossLand2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossLand2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4B3C9F2B73B24F000B9DAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D4B3CA12B73B24F000B9DAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D4B3CA32B73B24F000B9DAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5D4B3CA62B73B24F000B9DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D4B3CA92B73B24F000B9DAE /* CrossLand2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrossLand2.xcdatamodel; sourceTree = "<group>"; };
 		5D4B3CAB2B73B252000B9DAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D4B3CAE2B73B252000B9DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D4B3CB02B73B252000B9DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D4B3CB62B73B25E000B9DAE /* CrossLand2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrossLand2.entitlements; sourceTree = "<group>"; };
+		5DA3FFE02B748CBD003B80AE /* VCDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDebug.swift; sourceTree = "<group>"; };
+		5DA3FFE12B748CBD003B80AE /* VCDebug.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCDebug.xib; sourceTree = "<group>"; };
+		5DA3FFE42B748D13003B80AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5DA3FFE52B748D13003B80AE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DA56A962B7B693A00ADFD08 /* VCBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBottomBar.swift; sourceTree = "<group>"; };
+		5DA56A972B7B693A00ADFD08 /* VCBottomBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCBottomBar.xib; sourceTree = "<group>"; };
+		5DA56A9C2B7B82E400ADFD08 /* VCForumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCForumView.swift; sourceTree = "<group>"; };
+		5DA56A9D2B7B82E400ADFD08 /* VCForumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCForumView.xib; sourceTree = "<group>"; };
+		5DA56AA12B7B841500ADFD08 /* VCCellForumTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCellForumTitle.swift; sourceTree = "<group>"; };
+		5DA56AA22B7B841500ADFD08 /* VCCellForumTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCCellForumTitle.xib; sourceTree = "<group>"; };
+		5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMarqueeView.swift; sourceTree = "<group>"; };
+		5DA56AA72B7B92EB00ADFD08 /* Acknowledgement.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Acknowledgement.md; sourceTree = "<group>"; };
+		5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXMarqueeView.swift; sourceTree = "<group>"; };
+		5DB9B0932B7C409200E02925 /* VCCellForumMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCellForumMain.swift; sourceTree = "<group>"; };
+		5DB9B0942B7C409200E02925 /* VCCellForumMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCCellForumMain.xib; sourceTree = "<group>"; };
+		5DE8C8022B7CC77900B868FB /* VCSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSettings.swift; sourceTree = "<group>"; };
+		5DE8C8032B7CC77900B868FB /* VCSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCSettings.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +82,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA56A8A2B7B62F300ADFD08 /* Alamofire in Frameworks */,
+				5DA56A852B7B626B00ADFD08 /* SnapKit in Frameworks */,
+				5DA56A902B7B631E00ADFD08 /* AlamofireImage in Frameworks */,
+				5DB9B0992B7C423900E02925 /* Hero in Frameworks */,
+				5DA56A8D2B7B630800ADFD08 /* SwiftyJSON in Frameworks */,
+				5DE8C7FE2B7C9CB800B868FB /* AnimateText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +113,80 @@
 		5D4B3C9E2B73B24F000B9DAE /* CrossLand2 */ = {
 			isa = PBXGroup;
 			children = (
+				5DA56A912B7B666600ADFD08 /* CoreLand */,
+				5DA3FFDE2B748C88003B80AE /* MainLand */,
+				5DA3FFDF2B748C94003B80AE /* Debug */,
+				5DA3FFDB2B747227003B80AE /* Settings */,
+				5DA3FFDA2B747012003B80AE /* Rotom */,
+				5D4B3CB62B73B25E000B9DAE /* CrossLand2.entitlements */,
 				5D4B3C9F2B73B24F000B9DAE /* AppDelegate.swift */,
 				5D4B3CA12B73B24F000B9DAE /* SceneDelegate.swift */,
-				5D4B3CA32B73B24F000B9DAE /* ViewController.swift */,
-				5D4B3CA52B73B24F000B9DAE /* Main.storyboard */,
 				5D4B3CAB2B73B252000B9DAE /* Assets.xcassets */,
+				5DA3FFE42B748D13003B80AE /* Main.storyboard */,
+				5DA3FFE52B748D13003B80AE /* ViewController.swift */,
 				5D4B3CAD2B73B252000B9DAE /* LaunchScreen.storyboard */,
 				5D4B3CB02B73B252000B9DAE /* Info.plist */,
 				5D4B3CA82B73B24F000B9DAE /* CrossLand2.xcdatamodeld */,
+				5DA56AA72B7B92EB00ADFD08 /* Acknowledgement.md */,
 			);
 			path = CrossLand2;
+			sourceTree = "<group>";
+		};
+		5DA3FFDA2B747012003B80AE /* Rotom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rotom;
+			sourceTree = "<group>";
+		};
+		5DA3FFDB2B747227003B80AE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5DE8C8022B7CC77900B868FB /* VCSettings.swift */,
+				5DE8C8032B7CC77900B868FB /* VCSettings.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5DA3FFDE2B748C88003B80AE /* MainLand */ = {
+			isa = PBXGroup;
+			children = (
+				5DA56AA02B7B836500ADFD08 /* Cell */,
+				5DA56A962B7B693A00ADFD08 /* VCBottomBar.swift */,
+				5DA56A972B7B693A00ADFD08 /* VCBottomBar.xib */,
+				5DA56A9C2B7B82E400ADFD08 /* VCForumView.swift */,
+				5DA56A9D2B7B82E400ADFD08 /* VCForumView.xib */,
+			);
+			path = MainLand;
+			sourceTree = "<group>";
+		};
+		5DA3FFDF2B748C94003B80AE /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				5DA3FFE02B748CBD003B80AE /* VCDebug.swift */,
+				5DA3FFE12B748CBD003B80AE /* VCDebug.xib */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		5DA56A912B7B666600ADFD08 /* CoreLand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreLand;
+			sourceTree = "<group>";
+		};
+		5DA56AA02B7B836500ADFD08 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */,
+				5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */,
+				5DA56AA12B7B841500ADFD08 /* VCCellForumTitle.swift */,
+				5DA56AA22B7B841500ADFD08 /* VCCellForumTitle.xib */,
+				5DB9B0932B7C409200E02925 /* VCCellForumMain.swift */,
+				5DB9B0942B7C409200E02925 /* VCCellForumMain.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,12 +199,21 @@
 				5D4B3C982B73B24E000B9DAE /* Sources */,
 				5D4B3C992B73B24E000B9DAE /* Frameworks */,
 				5D4B3C9A2B73B24E000B9DAE /* Resources */,
+				5DA56A9B2B7B6AF400ADFD08 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CrossLand2;
+			packageProductDependencies = (
+				5DA56A842B7B626B00ADFD08 /* SnapKit */,
+				5DA56A892B7B62F300ADFD08 /* Alamofire */,
+				5DA56A8C2B7B630800ADFD08 /* SwiftyJSON */,
+				5DA56A8F2B7B631E00ADFD08 /* AlamofireImage */,
+				5DB9B0982B7C423900E02925 /* Hero */,
+				5DE8C7FD2B7C9CB800B868FB /* AnimateText */,
+			);
 			productName = CrossLand2;
 			productReference = 5D4B3C9C2B73B24F000B9DAE /* CrossLand2.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +227,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
+				ORGANIZATIONNAME = TRIStudio;
 				TargetAttributes = {
 					5D4B3C9B2B73B24E000B9DAE = {
 						CreatedOnToolsVersion = 15.2;
@@ -106,7 +235,7 @@
 				};
 			};
 			buildConfigurationList = 5D4B3C972B73B24E000B9DAE /* Build configuration list for PBXProject "CrossLand2" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -114,6 +243,14 @@
 				Base,
 			);
 			mainGroup = 5D4B3C932B73B24E000B9DAE;
+			packageReferences = (
+				5DA56A832B7B626B00ADFD08 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5DA56A882B7B62F300ADFD08 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5DA56A8B2B7B630800ADFD08 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				5DA56A8E2B7B631E00ADFD08 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				5DB9B0972B7C423800E02925 /* XCRemoteSwiftPackageReference "Hero" */,
+				5DE8C7FC2B7C9CB800B868FB /* XCRemoteSwiftPackageReference "AnimateText" */,
+			);
 			productRefGroup = 5D4B3C9D2B73B24F000B9DAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,9 +265,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA3FFE32B748CBD003B80AE /* VCDebug.xib in Resources */,
+				5DE8C8052B7CC77900B868FB /* VCSettings.xib in Resources */,
+				5DA56A9F2B7B82E400ADFD08 /* VCForumView.xib in Resources */,
+				5DA56AA42B7B841500ADFD08 /* VCCellForumTitle.xib in Resources */,
+				5DB9B0962B7C409200E02925 /* VCCellForumMain.xib in Resources */,
+				5DA56A992B7B693A00ADFD08 /* VCBottomBar.xib in Resources */,
 				5D4B3CAF2B73B252000B9DAE /* LaunchScreen.storyboard in Resources */,
 				5D4B3CAC2B73B252000B9DAE /* Assets.xcassets in Resources */,
-				5D4B3CA72B73B24F000B9DAE /* Main.storyboard in Resources */,
+				5DA3FFE62B748D13003B80AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +284,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4B3CA42B73B24F000B9DAE /* ViewController.swift in Sources */,
+				5DA56AA62B7B8B8C00ADFD08 /* MNMarqueeView.swift in Sources */,
+				5DA3FFE72B748D13003B80AE /* ViewController.swift in Sources */,
+				5DB9B0952B7C409200E02925 /* VCCellForumMain.swift in Sources */,
+				5DA3FFE22B748CBD003B80AE /* VCDebug.swift in Sources */,
 				5D4B3CA02B73B24F000B9DAE /* AppDelegate.swift in Sources */,
+				5DE8C8042B7CC77900B868FB /* VCSettings.swift in Sources */,
 				5D4B3CAA2B73B24F000B9DAE /* CrossLand2.xcdatamodeld in Sources */,
+				5DA56AAA2B7B9B9200ADFD08 /* JXMarqueeView.swift in Sources */,
+				5DA56A9E2B7B82E400ADFD08 /* VCForumView.swift in Sources */,
+				5DA56AA32B7B841500ADFD08 /* VCCellForumTitle.swift in Sources */,
 				5D4B3CA22B73B24F000B9DAE /* SceneDelegate.swift in Sources */,
+				5DA56A982B7B693A00ADFD08 /* VCBottomBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5D4B3CA52B73B24F000B9DAE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D4B3CA62B73B24F000B9DAE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D4B3CAD2B73B252000B9DAE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,15 +437,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CrossLand2/CrossLand2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FXSVDYCN2P;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CrossLand2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CrossLand;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +459,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studio.tri.cocoa.CrossLand2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,15 +474,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CrossLand2/CrossLand2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FXSVDYCN2P;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CrossLand2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CrossLand;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +496,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studio.tri.cocoa.CrossLand2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,6 +528,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DA56A832B7B626B00ADFD08 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.7.0;
+			};
+		};
+		5DA56A882B7B62F300ADFD08 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.8.1;
+			};
+		};
+		5DA56A8B2B7B630800ADFD08 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
+		5DA56A8E2B7B631E00ADFD08 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.3.0;
+			};
+		};
+		5DB9B0972B7C423800E02925 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.6.3;
+			};
+		};
+		5DE8C7FC2B7C9CB800B868FB /* XCRemoteSwiftPackageReference "AnimateText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AnimateText.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DA56A842B7B626B00ADFD08 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA56A832B7B626B00ADFD08 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		5DA56A892B7B62F300ADFD08 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA56A882B7B62F300ADFD08 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5DA56A8C2B7B630800ADFD08 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA56A8B2B7B630800ADFD08 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		5DA56A8F2B7B631E00ADFD08 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA56A8E2B7B631E00ADFD08 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		5DB9B0982B7C423900E02925 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB9B0972B7C423800E02925 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
+		};
+		5DE8C7FD2B7C9CB800B868FB /* AnimateText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DE8C7FC2B7C9CB800B868FB /* XCRemoteSwiftPackageReference "AnimateText" */;
+			productName = AnimateText;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5D4B3CA82B73B24F000B9DAE /* CrossLand2.xcdatamodeld */ = {

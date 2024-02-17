@@ -28,9 +28,20 @@
 		5DA56AA42B7B841500ADFD08 /* VCCellForumTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA56AA22B7B841500ADFD08 /* VCCellForumTitle.xib */; };
 		5DA56AA62B7B8B8C00ADFD08 /* MNMarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */; };
 		5DA56AAA2B7B9B9200ADFD08 /* JXMarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */; };
+		5DB2B3522B7DB393009ED2C3 /* LCStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2B34D2B7DB392009ED2C3 /* LCStorage.swift */; };
+		5DB2B3532B7DB393009ED2C3 /* LCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2B34E2B7DB392009ED2C3 /* LCAPI.swift */; };
+		5DB2B3542B7DB393009ED2C3 /* LCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2B34F2B7DB392009ED2C3 /* LCRequest.swift */; };
+		5DB2B3552B7DB393009ED2C3 /* LCDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2B3502B7DB392009ED2C3 /* LCDefaults.swift */; };
+		5DB2B3562B7DB393009ED2C3 /* LCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2B3512B7DB393009ED2C3 /* LCStruct.swift */; };
+		5DB2B3592B7DB631009ED2C3 /* VCNetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2B3572B7DB631009ED2C3 /* VCNetworkCheck.swift */; };
+		5DB2B35A2B7DB631009ED2C3 /* VCNetworkCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB2B3582B7DB631009ED2C3 /* VCNetworkCheck.xib */; };
+		5DB7778F2B804C5A006054DE /* TRAttrFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7778E2B804C5A006054DE /* TRAttrFactory.swift */; };
 		5DB9B0952B7C409200E02925 /* VCCellForumMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9B0932B7C409200E02925 /* VCCellForumMain.swift */; };
 		5DB9B0962B7C409200E02925 /* VCCellForumMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9B0942B7C409200E02925 /* VCCellForumMain.xib */; };
 		5DB9B0992B7C423900E02925 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB9B0982B7C423900E02925 /* Hero */; };
+		5DC2C4E02B7F8EF2007C44FF /* VCForumMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2C4DE2B7F8EF2007C44FF /* VCForumMain.swift */; };
+		5DC2C4E12B7F8EF2007C44FF /* VCForumMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC2C4DF2B7F8EF2007C44FF /* VCForumMain.xib */; };
+		5DC2C4E42B7F9C68007C44FF /* TRButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2C4E32B7F9C68007C44FF /* TRButtonAnimation.swift */; };
 		5DE8C7FE2B7C9CB800B868FB /* AnimateText in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE8C7FD2B7C9CB800B868FB /* AnimateText */; };
 		5DE8C8042B7CC77900B868FB /* VCSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8C8022B7CC77900B868FB /* VCSettings.swift */; };
 		5DE8C8052B7CC77900B868FB /* VCSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE8C8032B7CC77900B868FB /* VCSettings.xib */; };
@@ -71,8 +82,19 @@
 		5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMarqueeView.swift; sourceTree = "<group>"; };
 		5DA56AA72B7B92EB00ADFD08 /* Acknowledgement.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Acknowledgement.md; sourceTree = "<group>"; };
 		5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXMarqueeView.swift; sourceTree = "<group>"; };
+		5DB2B34D2B7DB392009ED2C3 /* LCStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCStorage.swift; sourceTree = "<group>"; };
+		5DB2B34E2B7DB392009ED2C3 /* LCAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCAPI.swift; sourceTree = "<group>"; };
+		5DB2B34F2B7DB392009ED2C3 /* LCRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCRequest.swift; sourceTree = "<group>"; };
+		5DB2B3502B7DB392009ED2C3 /* LCDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCDefaults.swift; sourceTree = "<group>"; };
+		5DB2B3512B7DB393009ED2C3 /* LCStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCStruct.swift; sourceTree = "<group>"; };
+		5DB2B3572B7DB631009ED2C3 /* VCNetworkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNetworkCheck.swift; sourceTree = "<group>"; };
+		5DB2B3582B7DB631009ED2C3 /* VCNetworkCheck.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCNetworkCheck.xib; sourceTree = "<group>"; };
+		5DB7778E2B804C5A006054DE /* TRAttrFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRAttrFactory.swift; sourceTree = "<group>"; };
 		5DB9B0932B7C409200E02925 /* VCCellForumMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCellForumMain.swift; sourceTree = "<group>"; };
 		5DB9B0942B7C409200E02925 /* VCCellForumMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCCellForumMain.xib; sourceTree = "<group>"; };
+		5DC2C4DE2B7F8EF2007C44FF /* VCForumMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCForumMain.swift; sourceTree = "<group>"; };
+		5DC2C4DF2B7F8EF2007C44FF /* VCForumMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCForumMain.xib; sourceTree = "<group>"; };
+		5DC2C4E32B7F9C68007C44FF /* TRButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRButtonAnimation.swift; sourceTree = "<group>"; };
 		5DE8C8022B7CC77900B868FB /* VCSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSettings.swift; sourceTree = "<group>"; };
 		5DE8C8032B7CC77900B868FB /* VCSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCSettings.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,11 +173,10 @@
 		5DA3FFDE2B748C88003B80AE /* MainLand */ = {
 			isa = PBXGroup;
 			children = (
+				5DC2C4E22B7F9BDB007C44FF /* Support */,
+				5DC0FC172B7F6A5F00181E89 /* Page */,
+				5DB2B34C2B7DB291009ED2C3 /* Components */,
 				5DA56AA02B7B836500ADFD08 /* Cell */,
-				5DA56A962B7B693A00ADFD08 /* VCBottomBar.swift */,
-				5DA56A972B7B693A00ADFD08 /* VCBottomBar.xib */,
-				5DA56A9C2B7B82E400ADFD08 /* VCForumView.swift */,
-				5DA56A9D2B7B82E400ADFD08 /* VCForumView.xib */,
 			);
 			path = MainLand;
 			sourceTree = "<group>";
@@ -165,6 +186,8 @@
 			children = (
 				5DA3FFE02B748CBD003B80AE /* VCDebug.swift */,
 				5DA3FFE12B748CBD003B80AE /* VCDebug.xib */,
+				5DB2B3572B7DB631009ED2C3 /* VCNetworkCheck.swift */,
+				5DB2B3582B7DB631009ED2C3 /* VCNetworkCheck.xib */,
 			);
 			path = Debug;
 			sourceTree = "<group>";
@@ -172,6 +195,11 @@
 		5DA56A912B7B666600ADFD08 /* CoreLand */ = {
 			isa = PBXGroup;
 			children = (
+				5DB2B34E2B7DB392009ED2C3 /* LCAPI.swift */,
+				5DB2B3502B7DB392009ED2C3 /* LCDefaults.swift */,
+				5DB2B34F2B7DB392009ED2C3 /* LCRequest.swift */,
+				5DB2B34D2B7DB392009ED2C3 /* LCStorage.swift */,
+				5DB2B3512B7DB393009ED2C3 /* LCStruct.swift */,
 			);
 			path = CoreLand;
 			sourceTree = "<group>";
@@ -179,14 +207,43 @@
 		5DA56AA02B7B836500ADFD08 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */,
-				5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */,
 				5DA56AA12B7B841500ADFD08 /* VCCellForumTitle.swift */,
 				5DA56AA22B7B841500ADFD08 /* VCCellForumTitle.xib */,
 				5DB9B0932B7C409200E02925 /* VCCellForumMain.swift */,
 				5DB9B0942B7C409200E02925 /* VCCellForumMain.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5DB2B34C2B7DB291009ED2C3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5DA56A962B7B693A00ADFD08 /* VCBottomBar.swift */,
+				5DA56A972B7B693A00ADFD08 /* VCBottomBar.xib */,
+				5DA56A9C2B7B82E400ADFD08 /* VCForumView.swift */,
+				5DA56A9D2B7B82E400ADFD08 /* VCForumView.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5DC0FC172B7F6A5F00181E89 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				5DC2C4DE2B7F8EF2007C44FF /* VCForumMain.swift */,
+				5DC2C4DF2B7F8EF2007C44FF /* VCForumMain.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		5DC2C4E22B7F9BDB007C44FF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5DA56AA92B7B9B9100ADFD08 /* JXMarqueeView.swift */,
+				5DA56AA52B7B8B8C00ADFD08 /* MNMarqueeView.swift */,
+				5DC2C4E32B7F9C68007C44FF /* TRButtonAnimation.swift */,
+				5DB7778E2B804C5A006054DE /* TRAttrFactory.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +327,11 @@
 				5DA56A9F2B7B82E400ADFD08 /* VCForumView.xib in Resources */,
 				5DA56AA42B7B841500ADFD08 /* VCCellForumTitle.xib in Resources */,
 				5DB9B0962B7C409200E02925 /* VCCellForumMain.xib in Resources */,
+				5DC2C4E12B7F8EF2007C44FF /* VCForumMain.xib in Resources */,
 				5DA56A992B7B693A00ADFD08 /* VCBottomBar.xib in Resources */,
 				5D4B3CAF2B73B252000B9DAE /* LaunchScreen.storyboard in Resources */,
 				5D4B3CAC2B73B252000B9DAE /* Assets.xcassets in Resources */,
+				5DB2B35A2B7DB631009ED2C3 /* VCNetworkCheck.xib in Resources */,
 				5DA3FFE62B748D13003B80AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,16 +344,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA56AA62B7B8B8C00ADFD08 /* MNMarqueeView.swift in Sources */,
+				5DB2B3532B7DB393009ED2C3 /* LCAPI.swift in Sources */,
+				5DB2B3552B7DB393009ED2C3 /* LCDefaults.swift in Sources */,
+				5DB2B3542B7DB393009ED2C3 /* LCRequest.swift in Sources */,
+				5DB2B3592B7DB631009ED2C3 /* VCNetworkCheck.swift in Sources */,
+				5DB2B3562B7DB393009ED2C3 /* LCStruct.swift in Sources */,
+				5DC2C4E42B7F9C68007C44FF /* TRButtonAnimation.swift in Sources */,
 				5DA3FFE72B748D13003B80AE /* ViewController.swift in Sources */,
+				5DC2C4E02B7F8EF2007C44FF /* VCForumMain.swift in Sources */,
 				5DB9B0952B7C409200E02925 /* VCCellForumMain.swift in Sources */,
 				5DA3FFE22B748CBD003B80AE /* VCDebug.swift in Sources */,
 				5D4B3CA02B73B24F000B9DAE /* AppDelegate.swift in Sources */,
 				5DE8C8042B7CC77900B868FB /* VCSettings.swift in Sources */,
 				5D4B3CAA2B73B24F000B9DAE /* CrossLand2.xcdatamodeld in Sources */,
 				5DA56AAA2B7B9B9200ADFD08 /* JXMarqueeView.swift in Sources */,
+				5DB2B3522B7DB393009ED2C3 /* LCStorage.swift in Sources */,
 				5DA56A9E2B7B82E400ADFD08 /* VCForumView.swift in Sources */,
 				5DA56AA32B7B841500ADFD08 /* VCCellForumTitle.swift in Sources */,
 				5D4B3CA22B73B24F000B9DAE /* SceneDelegate.swift in Sources */,
+				5DB7778F2B804C5A006054DE /* TRAttrFactory.swift in Sources */,
 				5DA56A982B7B693A00ADFD08 /* VCBottomBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

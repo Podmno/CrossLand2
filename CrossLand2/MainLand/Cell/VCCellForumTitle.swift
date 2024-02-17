@@ -14,8 +14,10 @@ class VCCellForumTitle: UIViewController {
     @IBOutlet weak var viewHolder: UIView!
     @IBOutlet weak var btnRule: UIButton!
     @IBOutlet weak var btnPost: UIButton!
+    @IBOutlet weak var csViewHolderHeight: NSLayoutConstraint!
     let labelMarquee = UILabel()
     
+    let animationHelper = TRButtonAnimation()
     
     let marqueeView = JXMarqueeView()
     
@@ -31,22 +33,38 @@ class VCCellForumTitle: UIViewController {
         appearViewContent()
     }
     
-    private func setupViewContent() {
-
-        // 为按钮添加动画
-        btnPost.addTarget(self, action: #selector(touchDown), for: .touchDown)
-        btnPost.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
-        btnPost.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
-        btnRule.addTarget(self, action: #selector(touchDown), for: .touchDown)
-        btnRule.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
-        btnRule.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
-
+        // Catalyst 专用：在 Frame 改变时改变跑马灯的位置
+        //marqueeView.frame = viewHolder.bounds
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        marqueeView.frame = viewHolder.bounds
+    }
+    
+    
+    private func setupViewContent() {
+
+        // 动画添加由 TRButtonAnimation 负责
+        animationHelper.attachAnimationToButton(btnPost)
+        animationHelper.attachAnimationToButton(btnRule)
+
+    }
+    
     private func appearViewContent() {
-        labelMarquee.text = "   此文本在正常情况下不因当被表示。如果你看到了此行文本，请将你的操作过程 / 设备信息 / 遇到的问题报告给 TRIStudio 以协助我们解决软件的错误。有关意见反馈及错误报告请点击主菜单的更多 > 设置 > 关于 > 问题报告，感谢你的协助与配合。你也可以访问 tri.studio.github.io TRIStudio 官方首页来获取帮助。"
+        marqueeView.removeFromSuperview()
+        
+        lbTitle.text = storageForumTitle
+        
+        labelMarquee.attributedText = self.storageForumInformationText
         labelMarquee.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         
         viewHolder.addSubview(marqueeView)
@@ -60,66 +78,122 @@ class VCCellForumTitle: UIViewController {
     
     // MARK: - 外部 API：装载标题栏信息
     
+    /// 此版面的名称
+    var storageForumTitle: String = ""
+    
+    /// 此版面的公告内容 HTML
+    var storageForumInformationHTML: String = ""
+    
+    var storageForumInformationText: NSAttributedString = NSAttributedString(string: "")
+    
     /// 设置大标题内容
-    public func setLargeTitle(_ title: String) {
-        
+    public func setupLargeTitle(_ title: String) {
+        storageForumTitle = title
     }
+    
     
     /// 设置滚动字体的内容
-    public func setTitleInformation() {
+    public func setupTitleInformation(_ contentHTML: String) {
+        storageForumInformationHTML = contentHTML
         
+        let attrFactory = TRAttrFactory()
+        storageForumInformationText = attrFactory.covertAttributedString(contentHTML) ?? NSAttributedString(string: "")
         
+        labelMarquee.attributedText = storageForumInformationText
     }
     
-    // MARK: - 按钮的点击动画添加
-    
-    private var downStart = Date()
-    private static var duration = 0.1 // changing to 0.5 makes it easier to test
-
-    @objc func touchDown(_ button: UIButton) {
-        downStart = Date() // Note when the touch-down happens
+    public func showDetailedTitleInformation(_ shown: Bool) {
         
-        UIView.animate(withDuration: Self.duration, delay: 0.0, options: .curveEaseIn) {
-            button.transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
-            
+        if (shown) {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+                self.marqueeView.alpha = 0.0
+                
+                self.callBackCellHeightWillChange()
+                self.csViewHolderHeight.constant = 70
+                
+                self.view.layoutIfNeeded()
+                self.callBackCellHeightDidChange()
+                
+                
+            }, completion:  {_ in 
+                
+            })
+        } else {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut ,animations: {
+                self.marqueeView.alpha = 1.0
+                
+                self.callBackCellHeightWillChange()
+                self.csViewHolderHeight.constant = 24
+                
+                self.view.layoutIfNeeded()
+                self.callBackCellHeightDidChange()
+                
+            }, completion: { _ in
+                
+            })
         }
-    }
-
-    @objc func touchUp(_ button: UIButton) {
-        // Delay the touch-up animation if needed
-        let delay = max(downStart.timeIntervalSinceNow + Self.duration, 0.0)
-        UIView.animate(withDuration: Self.duration, delay: delay, options: .curveEaseOut) {
-            button.transform = .identity
-        }
+        
+        
+        
     }
     
+    /// Callback: 通知行高度发生了变化
+    public var callBackCellHeightWillChange: () -> Void = {
+        
+    }
+    
+    public var callBackCellHeightDidChange: () -> Void = {
+        
+    }
+    
+    // MARK: - 按钮按下操作
+
     @IBAction func clickedPost(_ sender: Any) {
         print("> Go Post")
         //let soundID = SystemSoundID(kSystemSoundID_Vibrate)
         //let soundShort = SystemSoundID(1519)
         //AudioServicesPlaySystemSound(soundShort)
-        buttonActiveAnimation(sender as! UIButton)
+        //buttonActiveAnimation(sender as! UIButton)
     }
     
 
+    var btnNoticeActive = false
     @IBAction func clickedNotice(_ sender: Any) {
-        print("> Go Notice")
+
+        if (!btnNoticeActive) {
+            showDetailedTitleInformation(true)
+        } else {
+            showDetailedTitleInformation(false)
+            
+        }
+        buttonActiveAnimation(sender as! UIButton, status: !btnNoticeActive)
+        btnNoticeActive = !btnNoticeActive
         
         //let soundShort = SystemSoundID(1519)
         //AudioServicesPlaySystemSound(soundShort)
+        
     }
     
     
     // MARK: - 按钮按下后激活变色动画
     
-    func buttonActiveAnimation(_ button: UIButton) {
+    func buttonActiveAnimation(_ button: UIButton, status: Bool) {
         
-        button.backgroundColor = UIColor.accent
+        if (status) {
+            button.backgroundColor = UIColor.accent
 
-        button.setTitleColor(UIColor.white, for: .normal)
-        //button.imageView?.backgroundColor = UIColor.white
-        //button.imageView?.tintColor = UIColor.white
-        button.tintColor = UIColor.white
+            button.setTitleColor(UIColor.white, for: .normal)
+
+            button.tintColor = UIColor.white
+        } else {
+            button.backgroundColor = UIColor.systemGray6
+
+            button.setTitleColor(UIColor.label, for: .normal)
+
+            button.tintColor = UIColor.label
+        }
+        
+        
     }
 
 }

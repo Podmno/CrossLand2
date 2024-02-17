@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(*, deprecated, message: "MNMarqueeView deprecated.")
 class MNMarqueeView: UIView {
     
     // 跑马灯的滚动状态

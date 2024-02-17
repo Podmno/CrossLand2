@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCCellForumMain" customModule="CrossLand2" customModuleProvider="target">
             <connections>
+                <outlet property="btnPo" destination="TEQ-Jy-FyZ" id="981-9u-JlO"/>
+                <outlet property="btnSAGE" destination="ljy-KE-bB4" id="icK-ef-L9C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaE-UC-9Uu">
-                    <rect key="frame" x="16" y="16" width="59" height="24"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <rect key="frame" x="15.999999999999996" y="16" width="53.666666666666657" height="21.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023-04-12 (Sun.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-KZ-Edk">
-                    <rect key="frame" x="16" y="46" width="361" height="14.333333333333336"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <rect key="frame" x="16" y="43.666666666666664" width="361" height="13.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Peg-sV-LPe">
-                    <rect key="frame" x="91" y="18" width="82" height="21"/>
+                    <rect key="frame" x="85.666666666666671" y="16" width="82.000000000000014" height="21"/>
                     <subviews>
                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-Jy-FyZ">
                             <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
@@ -41,6 +43,7 @@
                                 <constraint firstAttribute="width" constant="29" id="z09-Fn-6jj"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="tintColor" systemColor="tintColor"/>
                             <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Po">
@@ -61,6 +64,7 @@
                                 <constraint firstAttribute="width" constant="48" id="eq9-p9-MOP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="tintColor" systemColor="tintColor"/>
                             <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="SAGE">
@@ -79,7 +83,7 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wn4-8W-XHe">
-                    <rect key="frame" x="16" y="66.333333333333329" width="361" height="10"/>
+                    <rect key="frame" x="16" y="63" width="361" height="10"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="jo9-iE-yZR"/>
                     </constraints>
@@ -88,7 +92,7 @@
                     <rect key="frame" x="16" y="70" width="361" height="172"/>
                     <string key="text">asddasdasda
 asdasd</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -132,7 +136,7 @@ asdasd</string>
                 <constraint firstItem="KaE-UC-9Uu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Qlm-Vj-HBA"/>
                 <constraint firstAttribute="bottom" secondItem="wmf-s6-N08" secondAttribute="bottom" constant="10" id="ahu-HP-kCu"/>
                 <constraint firstAttribute="trailing" secondItem="lkg-KZ-Edk" secondAttribute="trailing" constant="16" id="bJS-VQ-J2W"/>
-                <constraint firstItem="Peg-sV-LPe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="c1r-Aw-O0t"/>
+                <constraint firstItem="Peg-sV-LPe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="c1r-Aw-O0t"/>
                 <constraint firstAttribute="trailing" secondItem="1rq-iA-uO8" secondAttribute="trailing" constant="16" id="dOF-b4-uIi"/>
                 <constraint firstItem="Peg-sV-LPe" firstAttribute="leading" secondItem="KaE-UC-9Uu" secondAttribute="trailing" constant="16" id="hIz-ce-zTa"/>
                 <constraint firstAttribute="trailing" secondItem="ghn-1R-b5y" secondAttribute="trailing" constant="16" id="kHR-1R-c5S"/>
@@ -153,7 +157,7 @@ asdasd</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -19,8 +19,6 @@ class VCBottomBar: UIViewController {
         // Do any additional setup after loading the view.
         createMenu()
         
-        btnMenu.addTarget(self, action: #selector(touchDown), for: .touchDown)
-        btnMenu.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
     }
 
 
@@ -43,8 +41,6 @@ class VCBottomBar: UIViewController {
             
         }
         
-        
-        
         let menu_settings = UIAction(title: "设置", image: UIImage(systemName: "gear")) { _ in
             
         }
@@ -56,26 +52,6 @@ class VCBottomBar: UIViewController {
         self.btnMenu.menu = menuMainContent
         self.btnMenu.showsMenuAsPrimaryAction = true
     }
-    
-    private var downStart = Date()
-    private static var duration = 0.1 // changing to 0.5 makes it easier to test
 
-    
-    @objc func touchDown(_ button: UIButton) {
-        downStart = Date() // Note when the touch-down happens
-        
-        UIView.animate(withDuration: Self.duration, delay: 0.0, options: .curveEaseIn) {
-            button.transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
-            
-        }
-    }
-
-    @objc func touchUp(_ button: UIButton) {
-        // Delay the touch-up animation if needed
-        let delay = max(downStart.timeIntervalSinceNow + Self.duration, 0.0)
-        UIView.animate(withDuration: Self.duration, delay: delay, options: .curveEaseOut) {
-            button.transform = .identity
-        }
-    }
 
 }

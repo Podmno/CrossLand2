@@ -9,21 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let debugViewController = VCDebug(nibName: "VCDebug", bundle: Bundle.main)
-    let settingsViewController = VCSettings(nibName: "VCSettings", bundle: Bundle.main)
+    //let debugViewController = VCDebug(nibName: "VCDebug", bundle: Bundle.main)
+    //let settingsViewController = VCSettings(nibName: "VCSettings", bundle: Bundle.main)
+    var coreNavigationController: UINavigationController? = nil
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        let mainForum = VCForumMain(nibName: "VCForumMain", bundle: Bundle.main)
+        coreNavigationController = UINavigationController(rootViewController: mainForum)
+        coreNavigationController?.navigationBar.isHidden = true
+        
+        coreNavigationController?.modalPresentationStyle = .overFullScreen
+        coreNavigationController?.modalTransitionStyle = .crossDissolve
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        debugViewController.modalPresentationStyle = .overFullScreen
-        debugViewController.modalTransitionStyle = .crossDissolve
-        self.present(debugViewController, animated: true)
-        self.present(settingsViewController, animated: true)
+        //self.present(settingsViewController, animated: true)
+        self.present(coreNavigationController!, animated: true)
     }
 
 

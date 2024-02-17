@@ -9,10 +9,21 @@ import UIKit
 
 class VCCellForumMain: UIViewController {
 
+    
+    @IBOutlet weak var btnPo: UIButton!
+    @IBOutlet weak var btnSAGE: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if #available(macCatalyst 15.0,iOS 15.0, *) {
+            btnPo.backgroundColor = UIColor.tintColor
+            btnSAGE.backgroundColor = UIColor.tintColor
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
 
@@ -20,11 +31,9 @@ class VCCellForumMain: UIViewController {
     public func styleEnableCard(_ enabled: Bool) {
         if (enabled) {
             self.view.layer.cornerRadius = 16.0
-            self.view.layer.masksToBounds = true
-            self.view.backgroundColor = UIColor.systemGroupedBackground
+            self.view.backgroundColor = UIColor.systemGray6
         } else {
             self.view.layer.cornerRadius = 0.0
-            self.view.layer.masksToBounds = true
             self.view.backgroundColor = UIColor.systemBackground
         }
         

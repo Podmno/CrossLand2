@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TRAttrFactory : NSObject {
+class TRAttributedFactory : NSObject {
     
     func covertAttributedString(_ str: String) -> NSMutableAttributedString? {
         let html_a_label_pattern = "<a+.*?>([\\s\\S]*?)|</a*?>"

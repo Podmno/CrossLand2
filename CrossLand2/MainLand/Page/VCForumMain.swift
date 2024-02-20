@@ -8,8 +8,10 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class VCForumMain: UIViewController {
+
 
  
     @IBOutlet weak var tvMain: UITableView!
@@ -33,9 +35,8 @@ class VCForumMain: UIViewController {
         super.viewDidAppear(animated)
         
         tvMain.reloadData()
+        
     }
-
-    
 }
 
 class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -117,6 +118,8 @@ class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    
     
     
 }

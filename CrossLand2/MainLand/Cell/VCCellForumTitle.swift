@@ -6,31 +6,93 @@
 //
 
 import UIKit
+import SwiftUI
+import SnapKit
 import AudioToolbox
 
 class VCCellForumTitle: UIViewController {
 
-    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var viewTitle: UIView!
+    
+    @IBOutlet weak var buttonStack: UIStackView!
     @IBOutlet weak var viewHolder: UIView!
     @IBOutlet weak var btnRule: UIButton!
     @IBOutlet weak var btnPost: UIButton!
-    @IBOutlet weak var csViewHolderHeight: NSLayoutConstraint!
+    
+    
     let labelMarquee = UILabel()
     
     let animationHelper = TRButtonAnimation()
     
     let marqueeView = JXMarqueeView()
     
+    let titleAnimeText = UIHostingController(rootView: TUAnimeText(model: TUAnimeTextModel(text: "")))
+    
+    var viewHolder_height: Constraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViewContent()
- 
+        
+        self.callBackCellHeightWillChange()
+        self.viewTitle.addSubview(titleAnimeText.view)
+        self.titleAnimeText.view.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+
+        }
+
+        self.viewTitle.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(50)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+        
+
+        marqueeView.removeFromSuperview()
+        
+        //lbTitle.text = storageForumTitle
+        
+        labelMarquee.attributedText = self.storageForumInformationText
+        labelMarquee.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        
+        
+        viewHolder.addSubview(marqueeView)
+        marqueeView.contentView = labelMarquee
+        marqueeView.marqueeType = .left
+        marqueeView.pointsPerFrame = 0.5
+        
+        viewHolder.snp.makeConstraints { make in
+            make.top.equalTo(self.viewTitle.snp.bottom)
+            
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            self.viewHolder_height = make.height.equalTo(50).constraint
+        }
+        
+        self.buttonStack.snp.makeConstraints { make in
+            make.top.equalTo(self.viewHolder.snp.bottom).offset(60)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        
+        self.view.layoutIfNeeded()
+        
+        self.titleAnimeText.rootView.model.text = "综合版"
+        
+        self.callBackCellHeightDidChange()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        appearViewContent()
+        //appearViewContent()
+        
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -60,19 +122,8 @@ class VCCellForumTitle: UIViewController {
     }
     
     private func appearViewContent() {
-        marqueeView.removeFromSuperview()
-        
-        lbTitle.text = storageForumTitle
-        
-        labelMarquee.attributedText = self.storageForumInformationText
-        labelMarquee.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        
-        viewHolder.addSubview(marqueeView)
-        marqueeView.contentView = labelMarquee
-        marqueeView.marqueeType = .left
-        marqueeView.frame = viewHolder.bounds
-        marqueeView.pointsPerFrame = 0.5
-        
+
+
     }
     
     
@@ -96,7 +147,7 @@ class VCCellForumTitle: UIViewController {
     public func setupTitleInformation(_ contentHTML: String) {
         storageForumInformationHTML = contentHTML
         
-        let attrFactory = TRAttrFactory()
+        let attrFactory = TRAttributedFactory()
         storageForumInformationText = attrFactory.covertAttributedString(contentHTML) ?? NSAttributedString(string: "")
         
         labelMarquee.attributedText = storageForumInformationText
@@ -104,12 +155,17 @@ class VCCellForumTitle: UIViewController {
     
     public func showDetailedTitleInformation(_ shown: Bool) {
         
+        
+        
         if (shown) {
             UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
                 self.marqueeView.alpha = 0.0
                 
                 self.callBackCellHeightWillChange()
-                self.csViewHolderHeight.constant = 70
+
+                self.titleAnimeText.rootView.model.text = "HelloWorld"
+                self.viewHolder_height?.update(offset: 0)
+
                 
                 self.view.layoutIfNeeded()
                 self.callBackCellHeightDidChange()
@@ -123,8 +179,8 @@ class VCCellForumTitle: UIViewController {
                 self.marqueeView.alpha = 1.0
                 
                 self.callBackCellHeightWillChange()
-                self.csViewHolderHeight.constant = 24
                 
+                self.viewHolder_height?.update(offset: 50)
                 self.view.layoutIfNeeded()
                 self.callBackCellHeightDidChange()
                 

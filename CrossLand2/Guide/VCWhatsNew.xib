@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCWhatsNew" customModule="CrossLand2" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="NAY-L8-eng"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrossLand Preview 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkj-hb-w5M">
+                    <rect key="frame" x="72" y="55" width="231.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZj-2h-nrF">
+                    <rect key="frame" x="20" y="612" width="335" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="WmP-0U-Y5s"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="继续"/>
+                    <connections>
+                        <action selector="btnOKClicked:" destination="-1" eventType="touchUpInside" id="BkB-4U-ji2"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19e-uL-RvX">
+                    <rect key="frame" x="56" y="271.5" width="299" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长图分享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Om-SO-vQi">
+                    <rect key="frame" x="56" y="396" width="299" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ej7-oF-bqC">
+                    <rect key="frame" x="16" y="159" width="32" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="FP1-XR-L9R"/>
+                        <constraint firstAttribute="height" constant="26.5" id="h2C-dx-hHj"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.bubble" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qGl-5S-9HT">
+                    <rect key="frame" x="16" y="268.5" width="32" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26.5" id="4JB-zf-jfx"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26.5" id="LAT-M4-mGL"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="R3r-n9-yOu"/>
+                        <constraint firstAttribute="width" constant="32" id="i0e-HR-Wsj"/>
+                    </constraints>
+                </imageView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nLs-Od-8jR">
+                    <rect key="frame" x="16" y="390" width="32" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="3Bc-mr-xIE"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="32" id="5yG-8z-fuK"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26.5" id="LcF-Tz-lOb"/>
+                        <constraint firstAttribute="height" constant="26.5" id="Nev-eL-Dsp"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="YPC-U8-ghy"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢您选择 CrossLand。通过 CrossLand Preview 你可以体验到开发中的最新的 CrossLand 用户体验以及全新的实验性功能。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNU-9E-jL6">
+                    <rect key="frame" x="16" y="194.5" width="343" height="50.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此测试将会收集软件的调试与崩溃信息，以帮助我们改善正式版软件。我们不会向其他人分享这些信息。如果您有意见或建议，请通过软件内的 “意见反馈” 功能与我们联系。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-Xv-SJs">
+                    <rect key="frame" x="16" y="302.5" width="343" height="67"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="想要将新鲜事分享给朋友？通过 CrossLand 图片分享功能，你可以任意选择要导出的串内容，并将它到处为长图。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIw-Gn-D7N">
+                    <rect key="frame" x="16" y="427" width="343" height="50.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDy-LT-16u">
+                    <rect key="frame" x="56" y="164" width="299" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="DDy-LT-16u" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="144" id="1NF-iI-grL"/>
+                <constraint firstItem="HIw-Gn-D7N" firstAttribute="top" secondItem="nLs-Od-8jR" secondAttribute="bottom" constant="8" id="2KT-mC-eqh"/>
+                <constraint firstItem="ej7-oF-bqC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="140" id="4Pr-9o-1jB"/>
+                <constraint firstItem="hNU-9E-jL6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="54j-8W-POy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hNU-9E-jL6" secondAttribute="trailing" constant="16" id="5d2-99-9qn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="19e-uL-RvX" secondAttribute="trailing" constant="20" id="5ew-fj-MRt"/>
+                <constraint firstItem="hNU-9E-jL6" firstAttribute="top" secondItem="ej7-oF-bqC" secondAttribute="bottom" constant="8" id="FuC-i7-Qkw"/>
+                <constraint firstItem="HIw-Gn-D7N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="G3W-MO-b57"/>
+                <constraint firstItem="5Om-SO-vQi" firstAttribute="leading" secondItem="nLs-Od-8jR" secondAttribute="trailing" constant="8" id="JdD-4n-GC0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DDy-LT-16u" secondAttribute="trailing" constant="20" id="KyK-B7-7dc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Mdf-Xv-SJs" secondAttribute="trailing" constant="16" id="Q6u-A1-H0k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Om-SO-vQi" secondAttribute="trailing" constant="20" id="Qa4-Oc-J2L"/>
+                <constraint firstItem="nLs-Od-8jR" firstAttribute="top" secondItem="Mdf-Xv-SJs" secondAttribute="bottom" constant="23" id="TOE-TT-CX9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Om-SO-vQi" secondAttribute="trailing" constant="20" id="VJs-ts-gKw"/>
+                <constraint firstItem="qGl-5S-9HT" firstAttribute="top" secondItem="hNU-9E-jL6" secondAttribute="bottom" constant="23" id="XX5-KB-c6i"/>
+                <constraint firstItem="qGl-5S-9HT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Yab-gC-1sG"/>
+                <constraint firstItem="ej7-oF-bqC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Yas-Bv-2OM"/>
+                <constraint firstItem="DDy-LT-16u" firstAttribute="leading" secondItem="ej7-oF-bqC" secondAttribute="trailing" constant="8" id="YeW-OE-4fH"/>
+                <constraint firstItem="Mdf-Xv-SJs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Yt9-qQ-mfu"/>
+                <constraint firstItem="5Om-SO-vQi" firstAttribute="top" secondItem="Mdf-Xv-SJs" secondAttribute="bottom" constant="26.5" id="acW-1u-rR8"/>
+                <constraint firstItem="rkj-hb-w5M" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="35" id="btl-ep-tNo"/>
+                <constraint firstItem="nLs-Od-8jR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="c7d-r7-8II"/>
+                <constraint firstItem="EZj-2h-nrF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="d5M-bO-dR4"/>
+                <constraint firstItem="rkj-hb-w5M" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dPm-j5-yCc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HIw-Gn-D7N" secondAttribute="trailing" constant="16" id="h1Q-PE-sTp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EZj-2h-nrF" secondAttribute="trailing" constant="20" id="iDX-Ux-t9c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EZj-2h-nrF" secondAttribute="bottom" constant="20" id="iOt-dV-lQ1"/>
+                <constraint firstItem="Mdf-Xv-SJs" firstAttribute="top" secondItem="qGl-5S-9HT" secondAttribute="bottom" constant="8" id="koE-yw-nWR"/>
+                <constraint firstItem="19e-uL-RvX" firstAttribute="top" secondItem="hNU-9E-jL6" secondAttribute="bottom" constant="26.5" id="oaN-E3-y4E"/>
+                <constraint firstItem="19e-uL-RvX" firstAttribute="leading" secondItem="qGl-5S-9HT" secondAttribute="trailing" constant="8" id="pUL-hh-vqH"/>
+                <constraint firstItem="5Om-SO-vQi" firstAttribute="top" secondItem="Mdf-Xv-SJs" secondAttribute="bottom" constant="26.5" id="rgo-k7-apb"/>
+            </constraints>
+            <point key="canvasLocation" x="91.875" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.seal" catalog="system" width="128" height="124"/>
+        <image name="exclamationmark.bubble" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

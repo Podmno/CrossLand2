@@ -20,6 +20,26 @@ class TRButtonAnimation : NSObject {
         button.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
     }
     
+    public func buttonActiveAnimation(_ button: UIButton, status: Bool) {
+        if (status) {
+            button.backgroundColor = UIColor.accent
+        #if targetEnvironment(macCatalyst)
+            button.backgroundColor = UIColor.kjy_controlAccentColor
+        #endif
+
+            button.setTitleColor(UIColor.white, for: .normal)
+
+            button.tintColor = UIColor.white
+        } else {
+            button.backgroundColor = UIColor.systemGray6
+
+            button.setTitleColor(UIColor.label, for: .normal)
+
+            button.tintColor = UIColor.label
+        }
+    }
+    
+    
     @objc func touchDown(_ button: UIButton) {
         downStart = Date()
 
@@ -50,4 +70,10 @@ class TRButtonAnimation : NSObject {
     }
     
     
+}
+
+extension UIColor {
+    #if targetEnvironment(macCatalyst)
+    static var kjy_controlAccentColor: UIColor! { UIColor.value(forKey: "controlAccentColor") as? UIColor }
+    #endif
 }

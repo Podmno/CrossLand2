@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //let settingsViewController = VCSettings(nibName: "VCSettings", bundle: Bundle.main)
     var coreNavigationController: UINavigationController? = nil
     
+    var coreSplitController: UISplitViewController? = nil
     
 
     override func viewDidLoad() {
@@ -21,17 +22,29 @@ class ViewController: UIViewController {
         
         
         let mainForum = VCForumMain(nibName: "VCForumMain", bundle: Bundle.main)
-        coreNavigationController = UINavigationController(rootViewController: mainForum)
-        coreNavigationController?.navigationBar.isHidden = true
         
-        coreNavigationController?.modalPresentationStyle = .overFullScreen
-        coreNavigationController?.modalTransitionStyle = .crossDissolve
+        
+        coreSplitController = UISplitViewController(style: .doubleColumn)
+        coreSplitController?.modalPresentationStyle = .overFullScreen
+        coreSplitController?.modalTransitionStyle = .crossDissolve
+        coreSplitController?.preferredSplitBehavior = .tile
+        coreSplitController?.preferredDisplayMode = .twoOverSecondary
+        
+        
+        coreSplitController?.setViewController(mainForum, for: .primary)
+        
+        
+        //coreNavigationController = UINavigationController(rootViewController: mainForum)
+        //coreNavigationController?.navigationBar.isHidden = true
+        
+        //coreNavigationController?.modalPresentationStyle = .overFullScreen
+        //coreNavigationController?.modalTransitionStyle = .crossDissolve
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //self.present(settingsViewController, animated: true)
-        self.present(coreNavigationController!, animated: true)
+        self.present(coreSplitController!, animated: true)
     }
 
 

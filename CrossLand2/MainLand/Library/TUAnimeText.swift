@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import AnimateText
 
 struct TUTitleEffect: ATTextAnimateEffect {
     

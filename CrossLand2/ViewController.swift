@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var coreSplitController: UISplitViewController? = nil
     
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,7 +33,6 @@ class ViewController: UIViewController {
         
         
         coreSplitController?.setViewController(mainForum, for: .primary)
-        
         
         //coreNavigationController = UINavigationController(rootViewController: mainForum)
         //coreNavigationController?.navigationBar.isHidden = true

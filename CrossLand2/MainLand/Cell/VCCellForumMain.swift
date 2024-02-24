@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 
+import SwiftyJSON
+
 class VCCellForumMain: UIViewController {
 
     @IBOutlet weak var lbUserHash: UILabel!
@@ -23,11 +25,25 @@ class VCCellForumMain: UIViewController {
     @IBOutlet weak var bottomStack: UIStackView!
     let cellManager = VCCellForumMainSubCellFactory()
     
+    /// 顶部 StackView 要展示的堆栈
+    var topViewStack: [UIView] = []
+    
+    /// 底部 StackView 要展示的堆栈
+    var bottomViewStack: [UIView] = []
+    
+    /// 保存用的 Thread 信息
+    var storageThreadContent: LSThread? = nil
+    
+    public func setupThread(_ thread: LSThread) {
+        storageThreadContent = thread
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
+    
         if #available(macCatalyst 15.0,iOS 15.0, *) {
             btnPo.backgroundColor = UIColor.tintColor
             btnSAGE.backgroundColor = UIColor.tintColor
@@ -35,25 +51,42 @@ class VCCellForumMain: UIViewController {
             // Fallback on earlier versions
         }
         
-        let view_sage = cellManager.createSAGEInformation()
-        let view_sage2 = cellManager.createUserInfo(username: "demo")
-        let view_sage3 = cellManager.createUserEmail(username: "demo@demo.com")
-        
-        //callBackCellHeightWillChange()
-
-
-        topStack.addArrangedSubview(view_sage)
-        topStack.addArrangedSubview(view_sage2)
-        topStack.addArrangedSubview(view_sage3)
-        
-        csTopStackHeight.constant = csTopStackHeight.constant + cellManager.getSAGEInformationViewHeight() * 3
-
-        //topStack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 5, leading:5 , bottom: 5, trailing: 5)
-        
-        //callBackCellHeightDidChange()
+        setupContentView()
+        setupTopView()
+        setupBottomView()
+    }
+    
+    private func setupContentView() {
+        lbUserHash.text = storageThreadContent?.threadUserHash
         
     }
-
+    
+    private func setupTopView() {
+        
+        for item in topViewStack {
+            topStack.addArrangedSubview(item)
+        }
+        
+        if (topViewStack.count == 0) {
+            csTopStackHeight.constant = 0
+            return
+        }
+        csTopStackHeight.constant = csTopStackHeight.constant + cellManager.getTopStackViewHeight() * CGFloat(integerLiteral: topViewStack.count)
+        
+    }
+    
+    private func setupBottomView() {
+        for item in bottomViewStack {
+            bottomStack.addArrangedSubview(item)
+        }
+        
+        if (bottomViewStack.count == 0) {
+            csBottomStackHeight.constant = 0
+            return
+        }
+        
+        csBottomStackHeight.constant = csBottomStackHeight.constant + cellManager.getBottomStackViewHeight() * CGFloat(integerLiteral: bottomViewStack.count)
+    }
 
     /// 设定 View 为卡片形式
     public func styleEnableCard(_ enabled: Bool) {
@@ -109,36 +142,36 @@ class VCCellForumMainSubCellFactory: NSObject {
     }
     
     public func createUserInfo(username: String) -> UIView {
-        let sage_info = UIView()
+        let user_info = UIView()
         
-        let sage_label = UILabel()
-        sage_label.text = username
-        sage_label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        let name_label = UILabel()
+        name_label.text = username
+        name_label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         
-        let sage_image = UIImageView(image: UIImage(systemName: "h.circle"))
-        sage_image.tintColor = UIColor.label
-        sage_image.contentMode = .scaleAspectFit
-        sage_info.addSubview(sage_label)
-        sage_info.addSubview(sage_image)
+        let user_image = UIImageView(image: UIImage(systemName: "h.circle"))
+        user_image.tintColor = UIColor.label
+        user_image.contentMode = .scaleAspectFit
+        user_info.addSubview(name_label)
+        user_info.addSubview(user_image)
 
-        sage_image.snp.makeConstraints { make in
+        user_image.snp.makeConstraints { make in
             make.centerYWithinMargins.equalToSuperview()
             make.height.equalTo(16)
             make.width.equalTo(16)
         }
 
-        sage_label.snp.makeConstraints { make in
+        name_label.snp.makeConstraints { make in
             make.centerYWithinMargins.equalToSuperview()
-            make.left.equalTo(sage_image.snp.right).offset(8)
+            make.left.equalTo(user_image.snp.right).offset(8)
         }
-        sage_info.layer.cornerRadius = 11.0
-        sage_info.backgroundColor = UIColor.systemGray6
+        user_info.layer.cornerRadius = 11.0
+        user_info.backgroundColor = UIColor.systemGray6
 
-        return sage_info
+        return user_info
     }
     
     public func createUserEmail(username: String) -> UIView {
-        let sage_info = UIView()
+        let email_info = UIView()
         
         let sage_label = UILabel()
         sage_label.text = username
@@ -147,8 +180,8 @@ class VCCellForumMainSubCellFactory: NSObject {
         let sage_image = UIImageView(image: UIImage(systemName: "at.circle"))
         sage_image.tintColor = UIColor.label
         sage_image.contentMode = .scaleAspectFit
-        sage_info.addSubview(sage_label)
-        sage_info.addSubview(sage_image)
+        email_info.addSubview(sage_label)
+        email_info.addSubview(sage_image)
 
         sage_image.snp.makeConstraints { make in
             make.centerYWithinMargins.equalToSuperview()
@@ -160,13 +193,13 @@ class VCCellForumMainSubCellFactory: NSObject {
             make.centerYWithinMargins.equalToSuperview()
             make.left.equalTo(sage_image.snp.right).offset(8)
         }
-        sage_info.layer.cornerRadius = 11.0
-        sage_info.backgroundColor = UIColor.systemGray6
+        email_info.layer.cornerRadius = 11.0
+        email_info.backgroundColor = UIColor.systemGray6
 
-        return sage_info
+        return email_info
     }
     
-    public func getSAGEInformationViewHeight() -> CGFloat {
+    public func getTopStackViewHeight() -> CGFloat {
         return 14.0
     }
     
@@ -180,7 +213,58 @@ class VCCellForumMainSubCellFactory: NSObject {
         user_label.text = userPo
         content_label.text = userContent
         
+        user_label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        content_label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        
+        user_reply_line.addSubview(user_label)
+        user_reply_line.addSubview(content_label)
+        
+        user_label.snp.makeConstraints { make in
+            make.centerYWithinMargins.equalToSuperview()
+            make.left.equalToSuperview().offset(2)
+            make.height.equalTo(20)
+            make.width.equalTo(70)
+            
+        }
+        content_label.snp.makeConstraints { make in
+            make.centerYWithinMargins.equalToSuperview()
+            make.left.equalTo(user_label.snp.right).offset(8)
+            make.right.equalToSuperview().offset(8)
+        }
+        
         return user_reply_line
+    }
+    
+    public func createUserReplyCountView(count: Int) -> UIView {
+        let sage_info = UIView()
+        
+        let sage_label = UILabel()
+        sage_label.text = "还有 \(count) 条回复"
+        sage_label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        
+        let sage_image = UIImageView(image: UIImage(systemName: "quote.bubble"))
+        sage_image.tintColor = UIColor.label
+        sage_image.contentMode = .scaleAspectFit
+        sage_info.addSubview(sage_label)
+        sage_info.addSubview(sage_image)
+
+        sage_image.snp.makeConstraints { make in
+            make.centerYWithinMargins.equalToSuperview()
+            make.height.equalTo(20)
+            make.width.equalTo(20)
+        }
+
+        sage_label.snp.makeConstraints { make in
+            make.centerYWithinMargins.equalToSuperview()
+            make.left.equalTo(sage_image.snp.right).offset(8)
+        }
+        
+
+        return sage_info
+    }
+    
+    public func getBottomStackViewHeight() -> CGFloat {
+        return 20.0
     }
     
     

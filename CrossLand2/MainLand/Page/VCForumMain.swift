@@ -16,6 +16,8 @@ class VCForumMain: UIViewController {
  
     @IBOutlet weak var tvMain: UITableView!
     
+    let settings_demo = VCSettingsHolder(nibName: "VCSettingsHolder", bundle: Bundle.main)
+    
     let dsTableMain = VCForumMainTable()
     
     override func viewDidLoad() {
@@ -31,6 +33,8 @@ class VCForumMain: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationController?.isNavigationBarHidden = true
+        
+        self.present(settings_demo, animated: true)
     }
 
     override func viewDidAppear(_ animated: Bool) {

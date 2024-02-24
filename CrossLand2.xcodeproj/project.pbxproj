@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3B74072B89E22600DDC032 /* VCSettingsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B74052B89E22600DDC032 /* VCSettingsHolder.swift */; };
+		5D3B74082B89E22600DDC032 /* VCSettingsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3B74062B89E22600DDC032 /* VCSettingsHolder.xib */; };
 		5D4B3CA02B73B24F000B9DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3C9F2B73B24F000B9DAE /* AppDelegate.swift */; };
 		5D4B3CA22B73B24F000B9DAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3CA12B73B24F000B9DAE /* SceneDelegate.swift */; };
 		5D4B3CAA2B73B24F000B9DAE /* CrossLand2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B3CA82B73B24F000B9DAE /* CrossLand2.xcdatamodeld */; };
@@ -14,6 +16,7 @@
 		5D4B3CAF2B73B252000B9DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B3CAD2B73B252000B9DAE /* LaunchScreen.storyboard */; };
 		5D527B1F2B8623CF00F6A2AA /* VCCellLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D527B1D2B8623CF00F6A2AA /* VCCellLoading.swift */; };
 		5D527B202B8623CF00F6A2AA /* VCCellLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D527B1E2B8623CF00F6A2AA /* VCCellLoading.xib */; };
+		5D527B222B863F8E00F6A2AA /* SUSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D527B212B863F8E00F6A2AA /* SUSettings.swift */; };
 		5D989B562B85B18D0054E243 /* VCWhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D989B542B85B18C0054E243 /* VCWhatsNew.swift */; };
 		5D989B572B85B18D0054E243 /* VCWhatsNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D989B552B85B18C0054E243 /* VCWhatsNew.xib */; };
 		5DA3FFE22B748CBD003B80AE /* VCDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3FFE02B748CBD003B80AE /* VCDebug.swift */; };
@@ -72,8 +75,6 @@
 		5DCEA5212B84A7BE005CA7FF /* ATTopBottomEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEA5082B84A7BE005CA7FF /* ATTopBottomEffect.swift */; };
 		5DCEA5222B84A7BE005CA7FF /* ATRotateEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEA5092B84A7BE005CA7FF /* ATRotateEffect.swift */; };
 		5DCEA5242B84AD1C005CA7FF /* TUAnimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEA5232B84AD1C005CA7FF /* TUAnimeText.swift */; };
-		5DE8C8042B7CC77900B868FB /* VCSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8C8022B7CC77900B868FB /* VCSettings.swift */; };
-		5DE8C8052B7CC77900B868FB /* VCSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE8C8032B7CC77900B868FB /* VCSettings.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,6 +91,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D3B74052B89E22600DDC032 /* VCSettingsHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSettingsHolder.swift; sourceTree = "<group>"; };
+		5D3B74062B89E22600DDC032 /* VCSettingsHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCSettingsHolder.xib; sourceTree = "<group>"; };
 		5D4B3C9C2B73B24F000B9DAE /* CrossLand2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossLand2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4B3C9F2B73B24F000B9DAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D4B3CA12B73B24F000B9DAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		5D4B3CB62B73B25E000B9DAE /* CrossLand2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrossLand2.entitlements; sourceTree = "<group>"; };
 		5D527B1D2B8623CF00F6A2AA /* VCCellLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCellLoading.swift; sourceTree = "<group>"; };
 		5D527B1E2B8623CF00F6A2AA /* VCCellLoading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCCellLoading.xib; sourceTree = "<group>"; };
+		5D527B212B863F8E00F6A2AA /* SUSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUSettings.swift; sourceTree = "<group>"; };
 		5D989B542B85B18C0054E243 /* VCWhatsNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWhatsNew.swift; sourceTree = "<group>"; };
 		5D989B552B85B18C0054E243 /* VCWhatsNew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCWhatsNew.xib; sourceTree = "<group>"; };
 		5DA3FFE02B748CBD003B80AE /* VCDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDebug.swift; sourceTree = "<group>"; };
@@ -154,8 +158,6 @@
 		5DCEA5082B84A7BE005CA7FF /* ATTopBottomEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTopBottomEffect.swift; sourceTree = "<group>"; };
 		5DCEA5092B84A7BE005CA7FF /* ATRotateEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATRotateEffect.swift; sourceTree = "<group>"; };
 		5DCEA5232B84AD1C005CA7FF /* TUAnimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAnimeText.swift; sourceTree = "<group>"; };
-		5DE8C8022B7CC77900B868FB /* VCSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSettings.swift; sourceTree = "<group>"; };
-		5DE8C8032B7CC77900B868FB /* VCSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCSettings.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,8 +235,9 @@
 		5DA3FFDB2B747227003B80AE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5DE8C8022B7CC77900B868FB /* VCSettings.swift */,
-				5DE8C8032B7CC77900B868FB /* VCSettings.xib */,
+				5D527B212B863F8E00F6A2AA /* SUSettings.swift */,
+				5D3B74052B89E22600DDC032 /* VCSettingsHolder.swift */,
+				5D3B74062B89E22600DDC032 /* VCSettingsHolder.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -498,11 +501,11 @@
 			files = (
 				5DA3FFE32B748CBD003B80AE /* VCDebug.xib in Resources */,
 				5D989B572B85B18D0054E243 /* VCWhatsNew.xib in Resources */,
-				5DE8C8052B7CC77900B868FB /* VCSettings.xib in Resources */,
 				5DA56A9F2B7B82E400ADFD08 /* VCForumView.xib in Resources */,
 				5D527B202B8623CF00F6A2AA /* VCCellLoading.xib in Resources */,
 				5DA56AA42B7B841500ADFD08 /* VCCellForumTitle.xib in Resources */,
 				5DB9B0962B7C409200E02925 /* VCCellForumMain.xib in Resources */,
+				5D3B74082B89E22600DDC032 /* VCSettingsHolder.xib in Resources */,
 				5DC2C4E12B7F8EF2007C44FF /* VCForumMain.xib in Resources */,
 				5DA56A992B7B693A00ADFD08 /* VCBottomBar.xib in Resources */,
 				5D4B3CAF2B73B252000B9DAE /* LaunchScreen.storyboard in Resources */,
@@ -538,14 +541,15 @@
 				5DCEA5172B84A7BE005CA7FF /* ATCurtainEffect.swift in Sources */,
 				5DA3FFE72B748D13003B80AE /* ViewController.swift in Sources */,
 				5DC2C4E02B7F8EF2007C44FF /* VCForumMain.swift in Sources */,
+				5D527B222B863F8E00F6A2AA /* SUSettings.swift in Sources */,
 				5DCEA50C2B84A7BE005CA7FF /* ATTextAnimatable.swift in Sources */,
+				5D3B74072B89E22600DDC032 /* VCSettingsHolder.swift in Sources */,
 				5DB9B0952B7C409200E02925 /* VCCellForumMain.swift in Sources */,
 				5DCEA5142B84A7BE005CA7FF /* ATHangEffect.swift in Sources */,
 				5DCEA51B2B84A7BE005CA7FF /* ATBlurEffect.swift in Sources */,
 				5DA3FFE22B748CBD003B80AE /* VCDebug.swift in Sources */,
 				5DCEA50D2B84A7BE005CA7FF /* ATTextAnimateEffect.swift in Sources */,
 				5D4B3CA02B73B24F000B9DAE /* AppDelegate.swift in Sources */,
-				5DE8C8042B7CC77900B868FB /* VCSettings.swift in Sources */,
 				5DCEA5102B84A7BE005CA7FF /* ATAnimateTextPreview.swift in Sources */,
 				5DCEA50E2B84A7BE005CA7FF /* ATElementData.swift in Sources */,
 				5DCEA51A2B84A7BE005CA7FF /* ATTwistEffect.swift in Sources */,

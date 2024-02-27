@@ -69,7 +69,7 @@ class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     override init() {
         super.init()
-        self.tableViewSelf?.register(VCForumMainTableCell.self, forCellReuseIdentifier: "cell")
+        
         vcTitle.callBackCellHeightWillChange = {
             self.tableViewSelf?.beginUpdates()
         }
@@ -160,8 +160,18 @@ class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
         return threadContent.count + 2
     }
     
+    var registered = false
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // 注册 TableViewCell
 
+        if (!registered) {
+            tableViewSelf = tableView
+            tableView.register(VCForumMainTableCell.self, forCellReuseIdentifier: "cell")
+            registered = true
+        }
+        
+        
         
         
         if (statusLoading) {
@@ -203,19 +213,21 @@ class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
         
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? VCForumMainTableCell
+        
         if (cell == nil) {
             cell = VCForumMainTableCell(style: .default, reuseIdentifier: "cell")
-            cell?.setupContent(thread: threadContent[thread_row])
-            cell?.awakeFromNib()
-            return cell!
         } else {
-            cell?.setupContent(thread: threadContent[thread_row])
-            cell?.awakeFromNib()
-            return cell!
+            cell?.removeThreadView()
         }
         
         
         
+        cell!.setupContent(thread: threadContent[thread_row])
+
+        //cell.awakeFromNib()
+        return cell!
+        
+
     }
     
     let skeletonViewFooter = VCCellForumMain()
@@ -259,7 +271,7 @@ class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
         
         if tableViewSelf!.contentOffset.y >= footer_offset {
             // FIXME: 需要在加载时进行堵塞
-            // FIXME: TableViewCell 复用不起作用
+            // FIXME: 已经启用了 TableViewCell 复用但复用绘制有问题
             print(footer_offset)
             lockForumLoading = true
             loadForum()
@@ -276,32 +288,30 @@ class VCForumMainTable: NSObject, UITableViewDelegate, UITableViewDataSource {
 
 class VCForumMainTableCell: UITableViewCell {
     
-    var forumViewController = VCCellForumMain(thread: LSThread())
-    var forumDataContent: LSThread? = nil
     
-    var setuped: Bool = false
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
     
     override func awakeFromNib() {
-        
-        if (setuped) {
-            print("setupd skip -> \(forumDataContent?.threadID)")
-            self.forumViewController.setupThread(forumDataContent ?? LSThread())
-            return
-        }
-
-        print("setupd -> \(forumDataContent?.threadID)")
-        self.addSubview(forumViewController.view)
-            
-        self.forumViewController.view.snp.makeConstraints { make in
-            make.top.bottom.left.right.equalToSuperview()
-        }
-        self.forumViewController.setupThread(forumDataContent ?? LSThread())
-        setuped = true
+        super.awakeFromNib()
         
     }
     
     func setupContent(thread: LSThread) {
-        self.forumDataContent = thread
+        let forumViewController = VCCellForumMain(thread: LSThread())
         forumViewController.setupThread(thread)
+        self.contentView.addSubview(forumViewController.view)
+        forumViewController.view.snp.makeConstraints { make in
+            make.top.bottom.left.right.equalToSuperview()
+        }
+        
+    }
+    
+    func removeThreadView() {
+        for view in self.contentView.subviews {
+            view.removeFromSuperview()
+        }
     }
 }

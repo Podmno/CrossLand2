@@ -834,48 +834,48 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
 			requirement = {
-				kind = exactVersion;
-				version = 1.30.4;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.30.4;
 			};
 		};
 		5DA56A832B7B626B00ADFD08 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = exactVersion;
-				version = 5.7.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
 			};
 		};
 		5DA56A882B7B62F300ADFD08 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = exactVersion;
-				version = 5.8.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
 			};
 		};
 		5DA56A8B2B7B630800ADFD08 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
-				kind = exactVersion;
-				version = 5.0.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
 			};
 		};
 		5DA56A8E2B7B631E00ADFD08 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
 			requirement = {
-				kind = exactVersion;
-				version = 4.3.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
 			};
 		};
 		5DB9B0972B7C423800E02925 /* XCRemoteSwiftPackageReference "Hero" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
 			requirement = {
-				kind = exactVersion;
-				version = 1.6.3;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

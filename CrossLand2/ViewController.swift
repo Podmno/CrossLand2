@@ -24,16 +24,17 @@ class ViewController: UIViewController {
         
         let mainForum = VCForumMain(nibName: "VCForumMain", bundle: Bundle.main)
         
+        let subForumWithNavigation = VCForumNav(nibName: "VCForumNav", bundle: Bundle.main)
         
         coreSplitController = UISplitViewController(style: .doubleColumn)
         coreSplitController?.modalPresentationStyle = .overFullScreen
         coreSplitController?.modalTransitionStyle = .crossDissolve
         coreSplitController?.preferredSplitBehavior = .tile
-        coreSplitController?.preferredDisplayMode = .twoOverSecondary
+        coreSplitController?.preferredDisplayMode = .oneBesideSecondary
         
         
         coreSplitController?.setViewController(mainForum, for: .primary)
-        
+        coreSplitController?.showDetailViewController(subForumWithNavigation, sender: self)
         //coreNavigationController = UINavigationController(rootViewController: mainForum)
         //coreNavigationController?.navigationBar.isHidden = true
         

@@ -14,7 +14,6 @@ class VCDebug: UIViewController {
     let bottomBar = VCBottomBar(nibName: "VCBottomBar", bundle: Bundle.main)
     let cell_demo = VCCellForumTitle(nibName: "VCCellForumTitle", bundle: Bundle.main)
     
-    let cell_main = VCCellForumMain(nibName: "VCCellForumMain", bundle: Bundle.main)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +30,7 @@ class VCDebug: UIViewController {
     }
     
     func setupView() {
+        /*
         self.view.addSubview(bottomBar.view)
         bottomBar.view.snp.makeConstraints { make in
             
@@ -55,7 +55,7 @@ class VCDebug: UIViewController {
             make.right.equalTo(self.view).offset(-16)
         }
         cell_main.styleEnableCard(true)
-        
+        */
     }
 
 

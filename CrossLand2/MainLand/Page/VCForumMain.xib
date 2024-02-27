@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCForumMain" customModule="CrossLand2" customModuleProvider="target">
             <connections>
+                <outlet property="bottomBarHolderView" destination="San-sa-hHM" id="hlj-gp-CS3"/>
                 <outlet property="tvMain" destination="Go8-XK-gC9" id="JKl-tO-cC9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,6 +25,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="San-sa-hHM">
+                    <rect key="frame" x="0.0" y="772" width="393" height="80"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ul6-sn-8GF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="s2f-aa-Ufe"/>
+                    </constraints>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bo5-ah-TdG">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IfP-VJ-MWN">
@@ -43,6 +55,9 @@
                 <constraint firstItem="Go8-XK-gC9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="J84-TX-7uf"/>
                 <constraint firstAttribute="bottom" secondItem="Go8-XK-gC9" secondAttribute="bottom" id="Mvd-sO-vTX"/>
                 <constraint firstItem="Go8-XK-gC9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SX6-qs-Qgt"/>
+                <constraint firstItem="San-sa-hHM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X9m-Lv-Gzk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="San-sa-hHM" secondAttribute="trailing" id="hA4-GJ-Wg3"/>
+                <constraint firstAttribute="bottom" secondItem="San-sa-hHM" secondAttribute="bottom" id="hb1-RM-aqC"/>
                 <constraint firstItem="Bo5-ah-TdG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nb4-4O-i7x"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-11"/>

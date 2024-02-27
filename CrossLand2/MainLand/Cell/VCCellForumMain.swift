@@ -23,6 +23,11 @@ class VCCellForumMain: UIViewController {
     @IBOutlet weak var csBottomStackHeight: NSLayoutConstraint!
     @IBOutlet weak var topStack: UIStackView!
     @IBOutlet weak var bottomStack: UIStackView!
+    
+    @IBOutlet weak var picHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var picWidth: NSLayoutConstraint!
+    
     let cellManager = VCCellForumMainSubCellFactory()
     
     /// 顶部 StackView 要展示的堆栈
@@ -37,6 +42,33 @@ class VCCellForumMain: UIViewController {
     public func setupThread(_ thread: LSThread) {
         storageThreadContent = thread
     }
+    
+    init(thread: LSThread) {
+        super.init(nibName: "VCCellForumMain", bundle: Bundle.main)
+        
+        setupThread(thread)
+    }
+    
+    init() {
+        super.init(nibName: "VCCellForumMain", bundle: Bundle.main)
+        
+        let thread_demo = LSThread()
+        thread_demo.threadUserHash = "HelloWorld\nHello"
+        thread_demo.threadDate = "2000-01-01 10:00:00"
+        thread_demo.threadID = 800000000
+        
+        let attr = TRAttributedFactory()
+        
+        thread_demo.threadContentAttributedString = attr.covertAttributedString("\n \nHelloasldkjklasjkldjljalskjdkljlaskjldjclkas\nd \njlc\nacskljlaksjdcljlakskdcjl\n aksjdcklqiowijo\naclskjlaksjcdiqo\n weui\naklscjlkajlwiiSD\ndasSDKANLSKDNWIQlknlzxn\naskldjk\nJKZn\nLJLKiuq_2")
+        thread_demo.threadImg = "example"
+        setupThread(thread_demo)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,11 +88,24 @@ class VCCellForumMain: UIViewController {
         setupBottomView()
     }
     
+    
+    
     private func setupContentView() {
-        lbUserHash.text = storageThreadContent?.threadUserHash
-        
+        lbUserHash.text = storageThreadContent?.threadUserHash ?? "Unknown"
+        lbNo.text = "No.\(storageThreadContent?.threadID ?? 0)"
+        lbTime.text = storageThreadContent?.threadDate ?? "2000-01-01(一)00:00:00"
+        tvMain.attributedText = storageThreadContent?.threadContentAttributedString
+
+        if (storageThreadContent?.threadImg.isEmpty ?? true) {
+            picHeight.constant = 0
+            picWidth.constant = 0
+        } else {
+            picHeight.constant = 150
+            picWidth.constant = 150
+        }
     }
     
+    /// 设定 Top View 的展示
     private func setupTopView() {
         
         for item in topViewStack {
@@ -75,6 +120,7 @@ class VCCellForumMain: UIViewController {
         
     }
     
+    /// 设定 Bottom View 的展示
     private func setupBottomView() {
         for item in bottomViewStack {
             bottomStack.addArrangedSubview(item)

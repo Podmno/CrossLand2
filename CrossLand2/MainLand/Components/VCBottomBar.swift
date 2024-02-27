@@ -43,6 +43,8 @@ class VCBottomBar: UIViewController {
         
         let menu_settings = UIAction(title: "设置", image: UIImage(systemName: "gear")) { _ in
             
+            let settings_demo = VCSettingsHolder(nibName: "VCSettingsHolder", bundle: Bundle.main)
+            self.present(settings_demo, animated: true)
         }
         
         let menu1 = UIMenu(title: "", options: .displayInline, children: [menu_post, menu_notice, menu_log, menu_search])

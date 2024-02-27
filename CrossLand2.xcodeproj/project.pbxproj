@@ -17,6 +17,9 @@
 		5D527B1F2B8623CF00F6A2AA /* VCCellLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D527B1D2B8623CF00F6A2AA /* VCCellLoading.swift */; };
 		5D527B202B8623CF00F6A2AA /* VCCellLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D527B1E2B8623CF00F6A2AA /* VCCellLoading.xib */; };
 		5D527B222B863F8E00F6A2AA /* SUSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D527B212B863F8E00F6A2AA /* SUSettings.swift */; };
+		5D97311B2B8AD7F6009D3E60 /* VCForumNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9731192B8AD7F6009D3E60 /* VCForumNav.swift */; };
+		5D97311C2B8AD7F6009D3E60 /* VCForumNav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D97311A2B8AD7F6009D3E60 /* VCForumNav.xib */; };
+		5D97311F2B8B1834009D3E60 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 5D97311E2B8B1834009D3E60 /* SkeletonView */; };
 		5D989B562B85B18D0054E243 /* VCWhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D989B542B85B18C0054E243 /* VCWhatsNew.swift */; };
 		5D989B572B85B18D0054E243 /* VCWhatsNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D989B552B85B18C0054E243 /* VCWhatsNew.xib */; };
 		5DA3FFE22B748CBD003B80AE /* VCDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3FFE02B748CBD003B80AE /* VCDebug.swift */; };
@@ -75,6 +78,8 @@
 		5DCEA5212B84A7BE005CA7FF /* ATTopBottomEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEA5082B84A7BE005CA7FF /* ATTopBottomEffect.swift */; };
 		5DCEA5222B84A7BE005CA7FF /* ATRotateEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEA5092B84A7BE005CA7FF /* ATRotateEffect.swift */; };
 		5DCEA5242B84AD1C005CA7FF /* TUAnimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEA5232B84AD1C005CA7FF /* TUAnimeText.swift */; };
+		5DE01D652B8B3FD300FBD5C3 /* Acknowledgement.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5DE01D642B8B3FD300FBD5C3 /* Acknowledgement.rtf */; };
+		5DE01D6B2B8B7E1E00FBD5C3 /* TRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE01D6A2B8B7E1E00FBD5C3 /* TRSS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,6 +109,8 @@
 		5D527B1D2B8623CF00F6A2AA /* VCCellLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCellLoading.swift; sourceTree = "<group>"; };
 		5D527B1E2B8623CF00F6A2AA /* VCCellLoading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCCellLoading.xib; sourceTree = "<group>"; };
 		5D527B212B863F8E00F6A2AA /* SUSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUSettings.swift; sourceTree = "<group>"; };
+		5D9731192B8AD7F6009D3E60 /* VCForumNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCForumNav.swift; sourceTree = "<group>"; };
+		5D97311A2B8AD7F6009D3E60 /* VCForumNav.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCForumNav.xib; sourceTree = "<group>"; };
 		5D989B542B85B18C0054E243 /* VCWhatsNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWhatsNew.swift; sourceTree = "<group>"; };
 		5D989B552B85B18C0054E243 /* VCWhatsNew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCWhatsNew.xib; sourceTree = "<group>"; };
 		5DA3FFE02B748CBD003B80AE /* VCDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDebug.swift; sourceTree = "<group>"; };
@@ -158,6 +165,8 @@
 		5DCEA5082B84A7BE005CA7FF /* ATTopBottomEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTopBottomEffect.swift; sourceTree = "<group>"; };
 		5DCEA5092B84A7BE005CA7FF /* ATRotateEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATRotateEffect.swift; sourceTree = "<group>"; };
 		5DCEA5232B84AD1C005CA7FF /* TUAnimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAnimeText.swift; sourceTree = "<group>"; };
+		5DE01D642B8B3FD300FBD5C3 /* Acknowledgement.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Acknowledgement.rtf; sourceTree = "<group>"; };
+		5DE01D6A2B8B7E1E00FBD5C3 /* TRSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRSS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +178,7 @@
 				5DA56A852B7B626B00ADFD08 /* SnapKit in Frameworks */,
 				5DA56A902B7B631E00ADFD08 /* AlamofireImage in Frameworks */,
 				5DB9B0992B7C423900E02925 /* Hero in Frameworks */,
+				5D97311F2B8B1834009D3E60 /* SkeletonView in Frameworks */,
 				5DA56A8D2B7B630800ADFD08 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +245,7 @@
 		5DA3FFDB2B747227003B80AE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				5DE01D642B8B3FD300FBD5C3 /* Acknowledgement.rtf */,
 				5D527B212B863F8E00F6A2AA /* SUSettings.swift */,
 				5D3B74052B89E22600DDC032 /* VCSettingsHolder.swift */,
 				5D3B74062B89E22600DDC032 /* VCSettingsHolder.xib */,
@@ -305,6 +316,8 @@
 			children = (
 				5DC2C4DE2B7F8EF2007C44FF /* VCForumMain.swift */,
 				5DC2C4DF2B7F8EF2007C44FF /* VCForumMain.xib */,
+				5D9731192B8AD7F6009D3E60 /* VCForumNav.swift */,
+				5D97311A2B8AD7F6009D3E60 /* VCForumNav.xib */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 				5DC2C4E32B7F9C68007C44FF /* TRButtonAnimation.swift */,
 				5DB7778E2B804C5A006054DE /* TRAttributedFactory.swift */,
 				5DCEA5232B84AD1C005CA7FF /* TUAnimeText.swift */,
+				5DE01D6A2B8B7E1E00FBD5C3 /* TRSS.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -448,6 +462,7 @@
 				5DA56A8C2B7B630800ADFD08 /* SwiftyJSON */,
 				5DA56A8F2B7B631E00ADFD08 /* AlamofireImage */,
 				5DB9B0982B7C423900E02925 /* Hero */,
+				5D97311E2B8B1834009D3E60 /* SkeletonView */,
 			);
 			productName = CrossLand2;
 			productReference = 5D4B3C9C2B73B24F000B9DAE /* CrossLand2.app */;
@@ -484,6 +499,7 @@
 				5DA56A8B2B7B630800ADFD08 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				5DA56A8E2B7B631E00ADFD08 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				5DB9B0972B7C423800E02925 /* XCRemoteSwiftPackageReference "Hero" */,
+				5D97311D2B8B1834009D3E60 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 5D4B3C9D2B73B24F000B9DAE /* Products */;
 			projectDirPath = "";
@@ -502,9 +518,11 @@
 				5DA3FFE32B748CBD003B80AE /* VCDebug.xib in Resources */,
 				5D989B572B85B18D0054E243 /* VCWhatsNew.xib in Resources */,
 				5DA56A9F2B7B82E400ADFD08 /* VCForumView.xib in Resources */,
+				5DE01D652B8B3FD300FBD5C3 /* Acknowledgement.rtf in Resources */,
 				5D527B202B8623CF00F6A2AA /* VCCellLoading.xib in Resources */,
 				5DA56AA42B7B841500ADFD08 /* VCCellForumTitle.xib in Resources */,
 				5DB9B0962B7C409200E02925 /* VCCellForumMain.xib in Resources */,
+				5D97311C2B8AD7F6009D3E60 /* VCForumNav.xib in Resources */,
 				5D3B74082B89E22600DDC032 /* VCSettingsHolder.xib in Resources */,
 				5DC2C4E12B7F8EF2007C44FF /* VCForumMain.xib in Resources */,
 				5DA56A992B7B693A00ADFD08 /* VCBottomBar.xib in Resources */,
@@ -566,6 +584,8 @@
 				5DCEA51E2B84A7BE005CA7FF /* ATSlideEffect.swift in Sources */,
 				5DCEA51D2B84A7BE005CA7FF /* ATOpacityEffect.swift in Sources */,
 				5DCEA5152B84A7BE005CA7FF /* ATTypoEffect.swift in Sources */,
+				5D97311B2B8AD7F6009D3E60 /* VCForumNav.swift in Sources */,
+				5DE01D6B2B8B7E1E00FBD5C3 /* TRSS.swift in Sources */,
 				5DA56AA32B7B841500ADFD08 /* VCCellForumTitle.swift in Sources */,
 				5DCEA50A2B84A7BE005CA7FF /* ATRandomTypoAnimation.swift in Sources */,
 				5DCEA5132B84A7BE005CA7FF /* ATDropEffect.swift in Sources */,
@@ -810,6 +830,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5D97311D2B8B1834009D3E60 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.30.4;
+			};
+		};
 		5DA56A832B7B626B00ADFD08 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -853,6 +881,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5D97311E2B8B1834009D3E60 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D97311D2B8B1834009D3E60 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
 		5DA56A842B7B626B00ADFD08 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5DA56A832B7B626B00ADFD08 /* XCRemoteSwiftPackageReference "SnapKit" */;

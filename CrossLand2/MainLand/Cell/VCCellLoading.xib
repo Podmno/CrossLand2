@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCCellLoading" customModule="CrossLand2" customModuleProvider="target">
             <connections>
-                <outlet property="btnRetry" destination="6m7-mV-eVB" id="WxY-hz-edu"/>
+                <outlet property="btnRetry" destination="6m7-mV-eVB" id="47e-vh-O7G"/>
                 <outlet property="imgTitle" destination="iW4-r0-XBD" id="nEf-em-ewm"/>
                 <outlet property="lbFootnote" destination="cF6-53-WTk" id="2sN-sh-mbD"/>
                 <outlet property="lbInformation" destination="kYR-bi-lK5" id="bA8-Ne-6Gb"/>
@@ -26,16 +26,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络连接失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUS-gE-0J1">
-                    <rect key="frame" x="20" y="184.33333333333334" width="353" height="27"/>
+                    <rect key="frame" x="20" y="194.33333333333334" width="353" height="27"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="networkError" translatesAutoresizingMaskIntoConstraints="NO" id="iW4-r0-XBD">
-                    <rect key="frame" x="108" y="49.999999999999993" width="177" height="104.33333333333331"/>
+                    <rect key="frame" x="108" y="59.999999999999993" width="177" height="104.33333333333331"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYR-bi-lK5">
-                    <rect key="frame" x="20" y="226.33333333333334" width="353" height="38.333333333333343"/>
+                    <rect key="frame" x="20" y="236.33333333333334" width="353" height="38.333333333333343"/>
                     <string key="text">无法连接到 X 岛服务器。
 请检查设备的网络连接情况，然后稍后再试。</string>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -43,15 +43,15 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m7-mV-eVB">
-                    <rect key="frame" x="146.66666666666666" y="393.33333333333331" width="100" height="30"/>
+                    <rect key="frame" x="146.66666666666666" y="403.33333333333331" width="100" height="30"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Uh4-Re-UK8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="重试">
-                        <color key="titleColor" systemColor="tintColor"/>
+                        <color key="titleColor" systemColor="labelColor"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -63,13 +63,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="追记：目前已经确认到了部分地区的运营商无法连接到 X 岛服务器。建议更换网络环境后重新再试。" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF6-53-WTk">
-                    <rect key="frame" x="20" y="294.66666666666669" width="353" height="28.666666666666686"/>
+                    <rect key="frame" x="20" y="304.66666666666669" width="353" height="28.666666666666686"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZWP-TT-P61">
-                    <rect key="frame" x="178" y="10" width="37" height="37"/>
+                    <rect key="frame" x="178" y="40" width="37" height="37"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -78,8 +78,8 @@
                 <constraint firstItem="cF6-53-WTk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8TU-oG-ry2"/>
                 <constraint firstItem="6m7-mV-eVB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FbJ-9Q-S3o"/>
                 <constraint firstItem="6m7-mV-eVB" firstAttribute="top" secondItem="cF6-53-WTk" secondAttribute="bottom" constant="70" id="Gi7-gA-9Cl"/>
-                <constraint firstItem="iW4-r0-XBD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="Haj-qB-fVO"/>
-                <constraint firstItem="ZWP-TT-P61" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="JMH-Oc-4YD"/>
+                <constraint firstItem="iW4-r0-XBD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="Haj-qB-fVO"/>
+                <constraint firstItem="ZWP-TT-P61" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="JMH-Oc-4YD"/>
                 <constraint firstItem="cF6-53-WTk" firstAttribute="top" secondItem="kYR-bi-lK5" secondAttribute="bottom" constant="30" id="KIF-KI-1sT"/>
                 <constraint firstItem="ZWP-TT-P61" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mwd-zf-8h8"/>
                 <constraint firstItem="DUS-gE-0J1" firstAttribute="top" secondItem="iW4-r0-XBD" secondAttribute="bottom" constant="30" id="Q26-PT-hbh"/>
@@ -100,14 +100,14 @@
     </objects>
     <resources>
         <image name="networkError" width="177" height="104.33333587646484"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

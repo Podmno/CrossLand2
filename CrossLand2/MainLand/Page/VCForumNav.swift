@@ -14,6 +14,17 @@ class VCForumNav: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("Nav - Did load")
+        
+        self.view.backgroundColor = UIColor.systemBackground
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationBar.isHidden = true
+        
     }
 
 

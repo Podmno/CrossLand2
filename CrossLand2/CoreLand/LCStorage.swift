@@ -13,6 +13,8 @@ open class LCStorage : NSObject {
     /// 全局共享的存储器资源
     static let shared = LCStorage()
     
+    let defaultsUtil = LCDefaults()
+    
     /// 内存中缓存的最大图片数量 超出的部分将被缓存至磁盘
     public let maxiumPictureMemoryStorageCount = 10
     
@@ -40,9 +42,7 @@ open class LCStorage : NSObject {
         userTemporaryDirectory = target_tmp_dir
     }
     
-    public func globalSaveForumListData() {
-        
-        
+    public func globalSaveForumListData(forumJson: String) {
         
     }
     

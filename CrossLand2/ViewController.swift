@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Inject
 
 class ViewController: UIViewController {
     
@@ -21,20 +22,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
         let mainForum = VCForumMain(nibName: "VCForumMain", bundle: Bundle.main)
-        
-        let subForumWithNavigation = VCForumNav(nibName: "VCForumNav", bundle: Bundle.main)
-        
+
         coreSplitController = UISplitViewController(style: .doubleColumn)
         coreSplitController?.modalPresentationStyle = .overFullScreen
         coreSplitController?.modalTransitionStyle = .crossDissolve
         coreSplitController?.preferredSplitBehavior = .tile
         coreSplitController?.preferredDisplayMode = .oneBesideSecondary
-        
-        
+            
+            
         coreSplitController?.setViewController(mainForum, for: .primary)
-        coreSplitController?.showDetailViewController(subForumWithNavigation, sender: self)
+
+        
         //coreNavigationController = UINavigationController(rootViewController: mainForum)
         //coreNavigationController?.navigationBar.isHidden = true
         
@@ -45,6 +44,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //self.present(settingsViewController, animated: true)
+        
         self.present(coreSplitController!, animated: true)
     }
 

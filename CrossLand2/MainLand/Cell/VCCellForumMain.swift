@@ -7,8 +7,10 @@
 
 import UIKit
 import SnapKit
-
+import AlamofireImage
 import SwiftyJSON
+import SkeletonView
+
 
 class VCCellForumMain: UIViewController {
 
@@ -83,6 +85,8 @@ class VCCellForumMain: UIViewController {
             // Fallback on earlier versions
         }
         
+        styleEnableCard(true)
+        
         setupContentView()
         setupTopView()
         setupBottomView()
@@ -102,6 +106,25 @@ class VCCellForumMain: UIViewController {
         } else {
             picHeight.constant = 150
             picWidth.constant = 150
+            
+            self.viewImage.showAnimatedGradientSkeleton()
+            let API = LCAPI()
+            let cdn_url = LCStorage.shared.getCDNImageURL()
+            let image_url = cdn_url + "thumb/" + (storageThreadContent?.threadImg ?? "") + (storageThreadContent?.threadExt ?? "")
+            print("Load URL Target : \(image_url)")
+            
+            API.pictureThumbDownload(targetURL: image_url) { image in
+                DispatchQueue.main.async {
+                    print(">>> setup UIImage")
+                    let data = image.pngData()
+                    let ui_image = UIImage(data: data!, scale: UIScreen.main.scale)
+                    let image = UIImageView(image: ui_image)
+                    image.contentMode = .scaleAspectFill
+                    self.viewImage.addSubview(image)
+                    image.frame = self.viewImage.bounds
+                    self.viewImage.hideSkeleton(transition: .crossDissolve(0.5))
+                }
+            }
         }
     }
     

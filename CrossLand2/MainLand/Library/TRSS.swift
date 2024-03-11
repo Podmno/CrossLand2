@@ -21,12 +21,12 @@ class TRSS : NSObject {
         NotificationCenter.default.addObserver(targetSelf, selector: targetFunction, name: Notification.Name("landXPresentSettings"), object: nil)
     }
     
-    /// 信号：跳转至 Settings 页面
+    /// 信号：跳转至 Acknowledgement 页面
     func signalPresentAcknowledgement() {
         NotificationCenter.default.post(name: Notification.Name("landXPresentAcknowledgement"), object: nil)
     }
     
-    /// 响应：跳转至 Settings 页面
+    /// 响应：跳转至 Acknowledgement 页面
     func slotPresentAcknowledgement(_ targetSelf: Any,_ targetFunction: Selector) {
         NotificationCenter.default.addObserver(targetSelf, selector: targetFunction, name: Notification.Name("landXPresentAcknowledgement"), object: nil)
     }
@@ -36,9 +36,19 @@ class TRSS : NSObject {
         NotificationCenter.default.post(name: Notification.Name("landXPresentSpotlight"), object: nil)
     }
     
-    /// 信号：跳转至 Spotlight 页面
+    /// 响应：跳转至 Spotlight 页面
     func slotPresentSpotlightPage(_ targetSelf: Any,_ targetFunction: Selector) {
         NotificationCenter.default.addObserver(targetSelf, selector: targetFunction, name: Notification.Name("landXPresentSpotlight"), object: nil)
+    }
+    
+    /// 信号：触发主页面重新加载
+    func signalToggleMainForumRefresh() {
+        NotificationCenter.default.post(name: Notification.Name("landXToggleMainForumRefresh"), object: nil)
+    }
+    
+    /// 响应：触发主页面重新加载
+    func slotToggleMainForumRefresh(_ targetSelf: Any,_ targetFunction: Selector) {
+        NotificationCenter.default.addObserver(targetSelf, selector: targetFunction, name: Notification.Name("landXToggleMainForumRefresh"), object: nil)
     }
     
 }

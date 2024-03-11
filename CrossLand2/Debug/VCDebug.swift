@@ -11,8 +11,6 @@ import SnapKit
 
 class VCDebug: UIViewController {
     
-    let bottomBar = VCBottomBar(nibName: "VCBottomBar", bundle: Bundle.main)
-    let cell_demo = VCCellForumTitle(nibName: "VCCellForumTitle", bundle: Bundle.main)
     
     
     override func viewDidLoad() {

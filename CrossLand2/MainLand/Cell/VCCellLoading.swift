@@ -10,9 +10,9 @@ import UIKit
 
 class VCCellLoading: UIViewController {
     
+    @IBOutlet weak var btnRetry: UIButton!
     @IBOutlet weak var piLoading: UIActivityIndicatorView!
     @IBOutlet weak var imgTitle: UIImageView!
-    @IBOutlet weak var btnRetry: UIButton!
     
     @IBOutlet weak var lbTitle: UILabel!
     
@@ -29,6 +29,21 @@ class VCCellLoading: UIViewController {
         lbTitle.isHidden = true
         lbInformation.isHidden = true
         lbFootnote.isHidden = true
+        
+
+        btnRetry.tintColor = UIColor.accent
+    }
+    
+    func switchToLoading() {
+        piLoading.startAnimating()
+        piLoading.isHidden = false
+        imgTitle.isHidden = true
+        btnRetry.isHidden = true
+        lbTitle.isHidden = true
+        lbInformation.isHidden = true
+        lbFootnote.isHidden = true
+        
+        btnRetry.tintColor = UIColor.accent
     }
 
     func switchToForumBan() {
@@ -51,7 +66,10 @@ class VCCellLoading: UIViewController {
     
     
     @IBAction func btnClickedRefresh(_ sender: Any) {
+        let ss = TRSS()
+        ss.signalToggleMainForumRefresh()
         
+        switchToLoading()
     }
     
 

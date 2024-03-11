@@ -9,6 +9,7 @@
 import SwiftUI
 import SnapKit
 
+@available(macCatalyst 14.0, *)
 struct SUSettings: View {
     
     @State var disclosureGroup1_expanded = true

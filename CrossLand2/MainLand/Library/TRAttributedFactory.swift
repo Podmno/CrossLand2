@@ -34,7 +34,7 @@ class TRAttributedFactory : NSObject {
         if let attributedString = try? NSMutableAttributedString(data: data!, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
             attributedString.addAttributes(attr, range: NSRange(location: 0, length: attributedString.length))
             attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.label, range: NSRange(location: 0, length: attributedString.length))
-            
+            attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.clear, range: NSRange(location: 0, length: attributedString.length))
             return attributedString
         } else {
             return nil

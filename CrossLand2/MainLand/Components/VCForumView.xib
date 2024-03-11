@@ -4,13 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCForumView" customModule="CrossLand2" customModuleProvider="target">
             <connections>
+                <outlet property="tableMain" destination="2To-Or-AdA" id="Fjd-NP-eKc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,14 +24,14 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="2To-Or-AdA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="B9N-I0-9B1"/>
-                <constraint firstItem="2To-Or-AdA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DWc-L0-yNS"/>
-                <constraint firstItem="2To-Or-AdA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tmh-U6-Bez"/>
+                <constraint firstItem="2To-Or-AdA" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="DWc-L0-yNS"/>
+                <constraint firstItem="2To-Or-AdA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tmh-U6-Bez"/>
                 <constraint firstAttribute="bottom" secondItem="2To-Or-AdA" secondAttribute="bottom" id="y57-Yk-8cU"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>

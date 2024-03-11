@@ -131,7 +131,7 @@ class VCCellForumTitle: UIViewController {
             make.top.equalTo(self.viewHolder.snp.bottom).offset(20)
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-10)
         }
         
         

@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCBottomBar" customModule="CrossLand2" customModuleProvider="target">
             <connections>
+                <outlet property="btnMain" destination="hd7-cc-Eag" id="duH-Bo-Y4P"/>
                 <outlet property="btnMenu" destination="fTC-3s-YpZ" id="ytp-l7-1hl"/>
+                <outlet property="btnUser" destination="pCj-j9-YyV" id="2hx-RP-7Gu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,55 +22,60 @@
             <rect key="frame" x="0.0" y="0.0" width="392" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsZ-mM-aLd">
-                    <rect key="frame" x="0.0" y="0.0" width="392" height="64"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-j9-YyV">
-                            <rect key="frame" x="0.0" y="0.0" width="70" height="64"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="70" id="k7M-Bf-xGn"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title=" ">
-                                <imageReference key="image" image="person.circle" catalog="system" symbolScale="large"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-cc-Eag">
-                            <rect key="frame" x="70" y="0.0" width="252" height="64"/>
-                            <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="综合版1">
-                                <color key="titleColor" systemColor="labelColor"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-3s-YpZ">
-                            <rect key="frame" x="322" y="0.0" width="70" height="64"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="70" id="z4I-3d-uZE"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title=" ">
-                                <imageReference key="image" image="ellipsis.circle" catalog="system" symbolScale="large"/>
-                            </state>
-                        </button>
-                    </subviews>
-                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-cc-Eag">
+                    <rect key="frame" x="16" y="0.0" width="360" height="64"/>
+                    <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="综合版1">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="bottomButtonMain"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="clickedBottomButton:" destination="-1" eventType="touchUpInside" id="SIk-3T-eei"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-3s-YpZ">
+                    <rect key="frame" x="316" y="0.0" width="60" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="ZUj-T9-Z3C"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=" ">
+                        <imageReference key="image" image="ellipsis.circle" catalog="system" symbolScale="large"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-j9-YyV">
+                    <rect key="frame" x="16" y="0.0" width="60" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="k7M-Bf-xGn"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=" ">
+                        <imageReference key="image" image="person.circle" catalog="system" symbolScale="large"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="IsZ-mM-aLd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7LY-Ro-r3X"/>
-                <constraint firstAttribute="trailing" secondItem="IsZ-mM-aLd" secondAttribute="trailing" id="9GB-R5-NR4"/>
-                <constraint firstItem="IsZ-mM-aLd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cp4-54-MYp"/>
-                <constraint firstAttribute="bottom" secondItem="IsZ-mM-aLd" secondAttribute="bottom" id="frW-lU-fk8"/>
+                <constraint firstItem="hd7-cc-Eag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="2IK-O9-5IM"/>
+                <constraint firstAttribute="bottom" secondItem="hd7-cc-Eag" secondAttribute="bottom" id="BCD-iA-wSO"/>
+                <constraint firstItem="pCj-j9-YyV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Iet-bh-Cre"/>
+                <constraint firstItem="fTC-3s-YpZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PsX-Tu-6w2"/>
+                <constraint firstAttribute="trailing" secondItem="fTC-3s-YpZ" secondAttribute="trailing" constant="16" id="Yrp-Ix-Fjm"/>
+                <constraint firstItem="hd7-cc-Eag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b82-o2-hGe"/>
+                <constraint firstAttribute="bottom" secondItem="fTC-3s-YpZ" secondAttribute="bottom" id="gYd-Yo-IN8"/>
+                <constraint firstItem="pCj-j9-YyV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="k3J-9y-RlQ"/>
+                <constraint firstAttribute="bottom" secondItem="pCj-j9-YyV" secondAttribute="bottom" id="ksq-d0-4lD"/>
+                <constraint firstAttribute="trailing" secondItem="hd7-cc-Eag" secondAttribute="trailing" constant="16" id="lEZ-fQ-y7M"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="482.44274809160305" y="200.70422535211267"/>

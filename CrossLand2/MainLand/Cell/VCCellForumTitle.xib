@@ -25,11 +25,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="14" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4IA-xL-PTC">
-                    <rect key="frame" x="348" y="131.66666666666663" width="112" height="35.333333333333343"/>
+                    <rect key="frame" x="348" y="131.66666666666663" width="112" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-Ka-qis">
-                            <rect key="frame" x="0.0" y="0.0" width="49" height="35.333333333333336"/>
+                            <rect key="frame" x="0.0" y="0.0" width="49" height="40"/>
                             <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="snW-I6-e60"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="13"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="7" maxX="0.0" maxY="7"/>
@@ -41,7 +44,7 @@
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="10"/>
+                                    <integer key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                             </userDefinedRuntimeAttributes>
@@ -50,8 +53,11 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf1-oQ-HuS">
-                            <rect key="frame" x="63" y="0.0" width="49" height="35.333333333333336"/>
+                            <rect key="frame" x="63" y="0.0" width="49" height="40"/>
                             <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8Z2-gH-RQ1"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="13"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="7" maxX="0.0" maxY="7"/>
@@ -63,7 +69,7 @@
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="10"/>
+                                    <integer key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                             </userDefinedRuntimeAttributes>

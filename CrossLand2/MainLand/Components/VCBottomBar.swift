@@ -23,9 +23,9 @@ class VCBottomBar: UIViewController {
         // Do any additional setup after loading the view.
         createMenu()
         
-        btnMain.addTarget(self, action: #selector(touchDown), for: .touchDown)
-        btnMain.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
-        btnMain.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
+        //btnMain.addTarget(self, action: #selector(touchDown), for: .touchDown)
+        //btnMain.addTarget(self, action: #selector(touchUp), for: .touchUpInside)
+        //btnMain.addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
     }
 
 
@@ -50,8 +50,10 @@ class VCBottomBar: UIViewController {
         
         let menu_settings = UIAction(title: "设置", image: UIImage(systemName: "gear")) { _ in
             
-            let settings_demo = VCSettingsHolder(nibName: "VCSettingsHolder", bundle: Bundle.main)
-            self.present(settings_demo, animated: true)
+            //let settings_demo = VCSettingsHolder(nibName: "VCSettingsHolder", bundle: Bundle.main)
+            //self.present(settings_demo, animated: true)
+            let signal = TRSS()
+            signal.signalPresentSettings()
         }
         
         let menu1 = UIMenu(title: "", options: .displayInline, children: [menu_post, menu_notice, menu_log, menu_search])

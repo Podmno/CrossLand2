@@ -28,6 +28,9 @@ class VCForumView: UIViewController {
         tableMain.delaysContentTouches = false
         //tvMain.allowsSelection = false
         //tvMain.delaysContentTouches = false
+        
+
+
     }
 
 
@@ -251,6 +254,7 @@ class VCForumViewTable: NSObject, UITableViewDelegate, UITableViewDataSource {
     // 锁：防止重复的网络请求
     var lockForumLoading = false
     func dealWithFooter() {
+        // TODO: 即使是网络错误的页面依然能够触发刷新，需要更正
         if scrollViewSelf == nil || tableViewSelf == nil {
             print("<!> Nil scrool view, table view, skip deal with footer")
         }

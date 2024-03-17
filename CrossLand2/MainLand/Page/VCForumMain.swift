@@ -25,6 +25,9 @@ class VCForumMain: UIViewController {
     
     let navForum = VCForumNav(nibName: "VCForumNav", bundle: Bundle.main)
     
+    let sbSettings = UIStoryboard(name: "SBSettings", bundle: Bundle.main)
+    var vcSettings: UIViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.hero.isEnabled = true
@@ -56,6 +59,7 @@ class VCForumMain: UIViewController {
         
         let ss = TRSS()
         ss.slotPresentSpotlightPage(self, #selector(pushSpotlightView))
+        ss.slotPresentSettings(self, #selector(pushSettingsView))
 
     }
 
@@ -73,5 +77,12 @@ class VCForumMain: UIViewController {
         
         self.present(pageSpotlight, animated: true)
         //self.navigationController?.pushViewController(pageSpotlight, animated: true)
+    }
+    
+    @objc func pushSettingsView() {
+        print("To SettingsView")
+        vcSettings = sbSettings.instantiateInitialViewController()
+        self.present(vcSettings!, animated: true)
+        
     }
 }
